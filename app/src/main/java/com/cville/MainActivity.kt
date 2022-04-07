@@ -69,10 +69,14 @@ class MainActivity : AppCompatActivity() {
             // Successfully signed in
 
             val user = FirebaseAuth.getInstance().currentUser
-            if (response != null && response.isNewUser) {
-                // TODO: new user
-            } else {
-                // TODO: already logged in user
+            if (response != null) {
+                if (response.isNewUser) {
+
+                    // TODO: new user case
+                } else {
+
+                    // TODO: already logged in user
+                }
             }
         } else {
             // Sign in failed. If response is null the user canceled the
