@@ -16,11 +16,11 @@
 
 
     <TextView
-        android:id="@+id/titleForm"
+        android:id="@+id/titleForm_p1_ref"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
-        android:text="Please fill the following info"
+        android:text="Registration"
         android:textColor="#090909"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,7 +41,7 @@
 
 
     <TextView
-        android:id="@+id/haveRelativesForm"
+        android:id="@+id/haveRelativesForm_p1_ref"
         android:layout_width="234dp"
         android:layout_height="81dp"
         android:layout_marginTop="328dp"
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/enterLocationForm"
+        android:id="@+id/enterLocationForm_p1_ref"
         android:layout_width="209dp"
         android:layout_height="29dp"
         android:layout_marginTop="248dp"
@@ -68,7 +68,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/PersonsNum"
+        android:id="@+id/PersonsNum_p1_ref"
         android:layout_width="266dp"
         android:layout_height="62dp"
         android:layout_marginTop="448dp"
@@ -81,7 +81,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/locationForm"
+        android:id="@+id/locationForm_p1_ref"
         android:layout_width="83dp"
         android:layout_height="32dp"
         android:layout_marginTop="248dp"
@@ -99,11 +99,11 @@
         android:layout_marginHorizontal="60dp"
         android:layout_marginTop="24dp"
         android:background="#cccccc"
-        app:layout_constraintTop_toBottomOf="@id/locationForm"
+        app:layout_constraintTop_toBottomOf="@id/locationForm_p1_ref"
         tools:layout_editor_absoluteX="60dp" />
 
     <TextView
-        android:id="@+id/genderForm"
+        android:id="@+id/genderForm_p1_ref"
         android:layout_width="83dp"
         android:layout_height="32dp"
         android:layout_marginTop="164dp"
@@ -121,7 +121,7 @@
         android:layout_marginHorizontal="60dp"
         android:layout_marginTop="24dp"
         android:background="#cccccc"
-        app:layout_constraintTop_toBottomOf="@id/genderForm"
+        app:layout_constraintTop_toBottomOf="@id/genderForm_p1_ref"
         tools:layout_editor_absoluteX="60dp" />
 
     <View
@@ -130,11 +130,11 @@
         android:layout_marginHorizontal="60dp"
         android:layout_marginTop="24dp"
         android:background="#cccccc"
-        app:layout_constraintTop_toBottomOf="@id/haveRelativesForm"
+        app:layout_constraintTop_toBottomOf="@id/haveRelativesForm_p1_ref"
         tools:layout_editor_absoluteX="60dp" />
 
     <RadioGroup
-        android:id="@+id/radioGroup_"
+        android:id="@+id/radioGroup_gender_p1_ref"
         android:layout_width="205dp"
         android:layout_height="32dp"
         android:layout_marginTop="164dp"
@@ -146,7 +146,7 @@
 
 
         <RadioButton
-            android:id="@+id/radioButtonM"
+            android:id="@+id/radioButtonM_p1_ref"
             android:layout_width="45dp"
             android:layout_height="33dp"
             android:onClick="radioButtonhandler"
@@ -157,7 +157,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <RadioButton
-            android:id="@+id/radioButtonF"
+            android:id="@+id/radioButtonF_p1_ref"
             android:layout_width="45dp"
             android:layout_height="33dp"
             android:onClick="radioButtonhandler"
@@ -169,7 +169,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <RadioButton
-            android:id="@+id/radioButtonOther"
+            android:id="@+id/radioButtonOther_p1_ref"
             android:layout_width="97dp"
             android:layout_height="match_parent"
             android:onClick="radioButtonhandler"
@@ -182,7 +182,7 @@
     </RadioGroup>
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/radioGroup_relatives_p1_ref"
         android:layout_width="153dp"
         android:layout_height="32dp"
         android:layout_marginTop="328dp"
@@ -194,7 +194,7 @@
 
 
         <RadioButton
-            android:id="@+id/No"
+            android:id="@+id/No_p1_ref"
             android:layout_width="60dp"
             android:layout_height="33dp"
             android:onClick="radioButtonhandler"
@@ -205,7 +205,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <RadioButton
-            android:id="@+id/Yes"
+            android:id="@+id/Yes_p1_ref"
             android:layout_width="wrap_content"
             android:layout_height="33dp"
             android:onClick="radioButtonhandler"
@@ -225,7 +225,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/Location"
+        android:id="@+id/Location_p1_ref"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginRight="40dp"
@@ -235,7 +235,7 @@
         app:layout_constraintRight_toRightOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/guideline2_p1_ref"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal" />
