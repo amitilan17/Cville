@@ -15,6 +15,7 @@
     </style>
 
     <style name="Theme.Cville.NoActionBar">
+        <item name="fontFamily">@font/ubuntu</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
