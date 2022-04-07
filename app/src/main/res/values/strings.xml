@@ -11,5 +11,16 @@
     <string name="CVille">CVille</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Strings used for Registration form - refuge -->
+    <string name="title">Registration form</string>
+    <string name="helper_name">Full name</string>
+    <string name="others">Others:</string>
+    <string name="where">I am currently located in</string>
+    <string name="help_kinds">I would like to get help in the following:</string>
+    <string name="conditions">cloths</string>
+
+
 </resources>
+
+
+
