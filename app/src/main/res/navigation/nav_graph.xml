@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/launchFragment">
+    app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.cville.HomeFragment"
@@ -18,6 +18,9 @@
         <action
             android:id="@+id/action_homeFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_lookingForConnectionFragment"
+            app:destination="@id/lookingForConnectionFragment" />
     </fragment>
     <fragment
         android:id="@+id/infoFragment"
@@ -80,4 +83,22 @@
         android:name="com.cville.LaunchFragment"
         android:label="fragment_launch"
         tools:layout="@layout/fragment_launch" />
+    <fragment
+        android:id="@+id/lookingForConnectionFragment"
+        android:name="com.cville.LookingForConnectionFragment"
+        android:label="fragment_looking_for_connection"
+        tools:layout="@layout/fragment_looking_for_connection" >
+        <action
+            android:id="@+id/action_lookingForConnectionFragment_to_noMatchFragment"
+            app:destination="@id/noMatchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noMatchFragment"
+        android:name="com.cville.NoMatchFragment"
+        android:label="fragment_no_match"
+        tools:layout="@layout/fragment_no_match" >
+        <action
+            android:id="@+id/action_noMatchFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

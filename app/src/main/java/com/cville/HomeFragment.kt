@@ -28,9 +28,10 @@ class HomeFragment : Fragment() {
 
         val profileButton = view.findViewById<Button>(R.id.DummyProfile)
         profileButton.setOnClickListener {
-            val user = User("1111", "Amit", R.drawable.plus, "My name is Amit and I need help",null)
-            val directions= HomeFragmentDirections.actionHomeFragmentToProfileFragment(user)
-            findNavController().navigate(directions)
+//            val user = User("1111", "Amit", R.drawable.plus, "My name is Amit and I need help",null)
+//            val directions= HomeFragmentDirections.actionHomeFragmentToProfileFragment(user)
+//            findNavController().navigate(directions)
+            findNavController().navigate(R.id.action_homeFragment_to_lookingForConnectionFragment)
         }
 
         val infoButton = view.findViewById<Button>(R.id.Info)
