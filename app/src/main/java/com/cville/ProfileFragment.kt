@@ -1,7 +1,7 @@
 package com.cville
 
 import android.annotation.SuppressLint
-import android.media.Image
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,7 +11,6 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
 
 
 /**
@@ -41,11 +40,10 @@ class ProfileFragment() : Fragment() {
             findNavController().navigate(R.id.action_profileFragment_to_chatFragment)
         }
 
-//        val userImage = view.findViewById<ImageView>(R.id.image)
-//        userImage.setImageDrawable(requireContext().getDrawable(user.imageRes))
+        val imageView = view.findViewById<ImageView>(R.id.profile_image)
+        MainViewModel.setProfileImgToView(requireContext(), user.image, imageView)
 
         val userDescription = view.findViewById<TextView>(R.id.description)
         userDescription.text = user.description
-
     }
 }

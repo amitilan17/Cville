@@ -7,7 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.core.os.bundleOf
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -26,12 +29,16 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+
         val profileButton = view.findViewById<Button>(R.id.DummyProfile)
         profileButton.setOnClickListener {
-//            val user = User("1111", "Amit", R.drawable.plus, "My name is Amit and I need help",null)
-//            val directions= HomeFragmentDirections.actionHomeFragmentToProfileFragment(user)
-//            findNavController().navigate(directions)
-            findNavController().navigate(R.id.action_homeFragment_to_lookingForConnectionFragment)
+//            val user = User("1111", "Amit", Firebase.auth.currentUser?.photoUrl, "My name is Amit and I need help",null)
+            ViewModelProvider(this).get(MainViewModel::class.java).getUserObj("1111") {
+                val directions = HomeFragmentDirections.actionHomeFragmentToProfileFragment(it)
+                findNavController().navigate(directions)
+            }
+//            findNavController().navigate(R.id.action_homeFragment_to_lookingForConnectionFragment)
         }
 
         val infoButton = view.findViewById<Button>(R.id.Info)
@@ -52,7 +59,7 @@ class HomeFragment : Fragment() {
 
         val editProfileButton = view.findViewById<Button>(R.id.EditProfile)
         newConnectionButton.setOnClickListener {
-            // navigate to my profile
+            // TODO navigate to my profile
         }
     }
 }
