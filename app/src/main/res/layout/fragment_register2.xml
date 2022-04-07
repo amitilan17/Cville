@@ -20,7 +20,7 @@ tools:context=".RegisterFragment">
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="28dp"
-    android:text="@string/title"
+    android:text="Registration form"
     android:textColor="#D500F9"
     android:textSize="28sp"
     app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +34,7 @@ tools:context=".RegisterFragment">
         android:layout_width="318dp"
         android:layout_height="43dp"
         android:layout_marginTop="108dp"
-        android:text="@string/help_kinds"
+        android:text="I would like to get help in the following:"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.172"
@@ -95,7 +95,7 @@ tools:context=".RegisterFragment">
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/check4"
+        android:id="@+id/check8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="304dp"
@@ -153,20 +153,12 @@ tools:context=".RegisterFragment">
         android:layout_height="wrap_content"
         android:layout_marginTop="544dp"
         android:ems="10"
-        android:hint="@string/others"
+        android:hint="other:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="160dp"
-        android:text="Next"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="621dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

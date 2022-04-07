@@ -20,7 +20,7 @@ tools:context=".RegisterFragment">
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="28dp"
-    android:text="@string/title"
+    android:text="Registration form"
     android:textColor="#D500F9"
     android:textSize="28sp"
     app:layout_constraintEnd_toEndOf="parent"
@@ -34,14 +34,14 @@ tools:context=".RegisterFragment">
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
         android:ems="10"
-        android:hint="@string/helper_name"
+        android:hint="please enter your name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.184"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 <TextView
-android:id="@+id/gender"
+android:id="@+id/gender_"
 android:layout_width="83dp"
 android:layout_height="32dp"
 android:layout_marginTop="172dp"
@@ -53,7 +53,7 @@ app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toTopOf="parent" />
 
 <RadioGroup
-    android:id="@+id/radioGroup"
+    android:id="@+id/radioGroup_"
     android:layout_width="205dp"
     android:layout_height="32dp"
     android:layout_marginTop="172dp"
@@ -75,7 +75,7 @@ app:layout_constraintTop_toTopOf="parent" />
         android:onClick="radioButtonhandler"/>
 
     <RadioButton
-        android:id="@+id/female"
+        android:id="@+id/female_"
         android:layout_width="45dp"
         android:layout_height="33dp"
         android:text="F"
@@ -103,7 +103,7 @@ app:layout_constraintTop_toTopOf="parent" />
         android:layout_height="wrap_content"
         android:layout_marginTop="252dp"
         android:ems="10"
-        android:hint="@string/where"
+        android:hint="Im currently located in"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.194"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +115,7 @@ app:layout_constraintTop_toTopOf="parent" />
         android:layout_height="wrap_content"
         android:layout_marginTop="340dp"
         android:ems="10"
-        android:hint="@string/others"
+        android:hint="others:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.194"
         app:layout_constraintStart_toStartOf="parent"
@@ -149,7 +149,7 @@ app:layout_constraintTop_toTopOf="parent" />
 
 
         <RadioButton
-            android:id="@+id/female"
+            android:id="@+id/No"
             android:layout_width="60dp"
             android:layout_height="33dp"
             android:onClick="radioButtonhandler"
@@ -174,15 +174,7 @@ app:layout_constraintTop_toTopOf="parent" />
     </RadioGroup>
 
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="160dp"
-        android:text="Next"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="526dp" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
