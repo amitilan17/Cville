@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Eilon/CS/hackathon/Cville/app/src/main/res/layout/fragment_form_p1_helper.xml" value="0.18704710144927536" />
+        <entry key="..\:/Eilon/CS/hackathon/Cville/app/src/main/res/layout/fragment_form_p1_refugee.xml" value="0.4" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1721014492753623" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.1721014492753623" />
