@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/launchFragment">
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.cville.HomeFragment"
@@ -15,6 +15,9 @@
         <action
             android:id="@+id/action_homeFragment_to_helpFragment"
             app:destination="@id/helpFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/infoFragment"
@@ -49,4 +52,32 @@
         android:name="com.cville.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register1" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.cville.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <argument
+            android:name="user"
+            app:nullable="false"
+            app:argType="com.cville.User"/>
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.cville.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.cville.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/launchFragment"
+        android:name="com.cville.LaunchFragment"
+        android:label="fragment_launch"
+        tools:layout="@layout/fragment_launch" />
 </navigation>
