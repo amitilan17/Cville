@@ -17,5 +17,9 @@
     <string name="hebrew">עברית</string>
     <string name="ukranian">украї́нська</string>
 
+    <!-- Roles -->
+    <string name="helper">Helper</string>
+    <string name="seeker">Seeker</string>
+
 
 </resources>

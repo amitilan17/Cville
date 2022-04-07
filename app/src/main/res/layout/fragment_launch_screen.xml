@@ -6,47 +6,5 @@
     android:layout_height="match_parent"
     tools:context=".LaunchScreenFragment">
 
-    <Button
-        android:id="@+id/English"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/english"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0.25"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
-
-    <Button
-        android:id="@+id/Hebrew"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hebrew"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/English"
-        android:layout_marginTop="40dp" />
-
-    <Button
-        android:id="@+id/Ukranian"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ukranian"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Hebrew"
-        android:layout_marginTop="40dp"/>
-
-    <Button
-        android:id="@+id/Russian"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/russian"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Ukranian"
-        android:layout_marginTop="40dp"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
