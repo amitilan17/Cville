@@ -59,7 +59,7 @@ public class RegisterFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register1, container, false);
+        return inflater.inflate(R.layout.fragment_form_p1_refugee, container, false);
     }
 
 
