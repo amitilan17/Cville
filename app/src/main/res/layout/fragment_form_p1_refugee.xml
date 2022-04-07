@@ -15,12 +15,22 @@
     tools:context=".RegisterFragment">
 
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="8dp"
+        android:background="#cccccc"
+        app:layout_constraintTop_toBottomOf="@id/haveRelativesForm_p1_ref"
+        tools:layout_editor_absoluteX="8dp" />
+
     <TextView
-        android:id="@+id/titleForm"
+        android:id="@+id/titleForm_p1_ref"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
-        android:text="Please fill the following info"
+        android:text="Registration"
         android:textColor="#090909"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,11 +50,25 @@
 <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 
+    <EditText
+        android:id="@+id/enterNameForm_p1_ref"
+        android:layout_width="209dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="148dp"
+        android:background="#F5EBEB"
+        android:ems="10"
+        android:hint="please enter your name"
+        android:textColor="#090909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.841"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:id="@+id/haveRelativesForm"
+        android:id="@+id/haveRelativesForm_p1_ref"
         android:layout_width="234dp"
         android:layout_height="81dp"
-        android:layout_marginTop="328dp"
+        android:layout_marginTop="396dp"
         android:text="I have relatives\n in Israel"
         android:textColor="#090909"
         android:textSize="18sp"
@@ -54,10 +78,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/enterLocationForm"
+        android:id="@+id/enterLocationForm_p1_ref"
         android:layout_width="209dp"
         android:layout_height="29dp"
-        android:layout_marginTop="248dp"
+        android:layout_marginTop="316dp"
         android:background="#F5EBEB"
         android:ems="10"
         android:hint="please enter your location"
@@ -67,11 +91,54 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <RadioGroup
+        android:id="@+id/radioGroup_relatives_p1_ref"
+        android:layout_width="153dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="396dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.658"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RadioButton
+            android:id="@+id/No_p1_ref"
+            android:layout_width="60dp"
+            android:layout_height="33dp"
+            android:onClick="radioButtonhandler"
+            android:text="No"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.655"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/Yes_p1_ref"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:onClick="radioButtonhandler"
+            android:text="Yes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.655"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="43dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="68dp"
+            android:src="@drawable/Line_new" />
+
+
+    </RadioGroup>
+
     <TextView
-        android:id="@+id/PersonsNum"
+        android:id="@+id/PersonsNum_p1_ref"
         android:layout_width="266dp"
         android:layout_height="62dp"
-        android:layout_marginTop="448dp"
+        android:layout_marginTop="516dp"
         android:text="Number of persons \nin the family"
         android:textColor="#090909"
         android:textSize="18sp"
@@ -105,21 +172,21 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
         android:background="#cccccc"
-        app:layout_constraintTop_toBottomOf="@id/locationForm"
+        app:layout_constraintTop_toBottomOf="@id/locationForm_p1_ref"
         tools:layout_editor_absoluteX="60dp" />
 
     <TextView
-        android:id="@+id/genderForm"
+        android:id="@+id/genderForm_p1_ref"
         android:layout_width="83dp"
         android:layout_height="32dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="232dp"
         android:text="Gender"
         android:textColor="#090909"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -127,9 +194,9 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
         android:background="#cccccc"
-        app:layout_constraintTop_toBottomOf="@id/genderForm"
+        app:layout_constraintTop_toBottomOf="@id/genderForm_p1_ref"
         tools:layout_editor_absoluteX="60dp" />
 
     <View
@@ -137,16 +204,25 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
         android:background="#cccccc"
-        app:layout_constraintTop_toBottomOf="@id/haveRelativesForm"
+        app:layout_constraintTop_toBottomOf="@id/genderForm_p1_ref"
         tools:layout_editor_absoluteX="60dp" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="24dp"
+        android:background="#cccccc"
+        app:layout_constraintTop_toBottomOf="@id/nameForm_p1_ref"
+        tools:layout_editor_absoluteX="41dp" />
+
     <RadioGroup
-        android:id="@+id/radioGroup_"
+        android:id="@+id/radioGroup_gender_p1_ref"
         android:layout_width="205dp"
         android:layout_height="32dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="232dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.844"
@@ -155,7 +231,7 @@
 
 
         <RadioButton
-            android:id="@+id/radioButtonM"
+            android:id="@+id/radioButtonM_p1_ref"
             android:layout_width="45dp"
             android:layout_height="33dp"
             android:onClick="radioButtonhandler"
@@ -166,7 +242,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <RadioButton
-            android:id="@+id/radioButtonF"
+            android:id="@+id/radioButtonF_p1_ref"
             android:layout_width="45dp"
             android:layout_height="33dp"
             android:onClick="radioButtonhandler"
@@ -178,7 +254,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <RadioButton
-            android:id="@+id/radioButtonOther"
+            android:id="@+id/radioButtonOther_p1_ref"
             android:layout_width="97dp"
             android:layout_height="match_parent"
             android:onClick="radioButtonhandler"
@@ -190,46 +266,48 @@
             app:layout_constraintTop_toTopOf="parent" />
     </RadioGroup>
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="153dp"
+    <TextView
+        android:id="@+id/locationForm_p1_ref"
+        android:layout_width="83dp"
         android:layout_height="32dp"
-        android:layout_marginTop="328dp"
-        android:orientation="horizontal"
+        android:layout_marginTop="316dp"
+        android:text="Location"
+        android:textColor="#090909"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.658"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/nameForm_p1_ref"
+        android:layout_width="83dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="148dp"
+        android:text="Name"
+        android:textColor="#090909"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/No"
-            android:layout_width="60dp"
-            android:layout_height="33dp"
-            android:onClick="radioButtonhandler"
-            android:text="No"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.655"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <RadioButton
-            android:id="@+id/Yes"
-            android:layout_width="wrap_content"
-            android:layout_height="33dp"
-            android:onClick="radioButtonhandler"
-            android:text="Yes"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.655"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/Location_p1_ref"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/next_page"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
 
     </RadioGroup>
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/guideline2_p1_ref"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal" />
