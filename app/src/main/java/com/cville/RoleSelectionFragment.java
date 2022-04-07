@@ -66,14 +66,10 @@ public class RoleSelectionFragment extends Fragment {
     }
 
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Button infoButton = view.findViewById(R.id.Helper);
-        infoButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v)
-            {
-                NavController navController = Navigation.findNavController(v);
-                navController.navigate(R.id.action_homeFragment_to_infoFragment);
-            }
+        Button infoButton = view.findViewById(R.id.Next);
+        infoButton.setOnClickListener(v -> {
+            NavController navController = Navigation.findNavController(v);
+            navController.navigate(R.id.action_roleFragment_to_registerFragment);
         });
     }
 }

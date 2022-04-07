@@ -3,6 +3,8 @@ package com.cville;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,9 +56,6 @@ public class LanguageSelectionFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-
-            Button myButton = new Button(this);
-            myButton.setText("Press Me");
         }
     }
 
@@ -65,5 +64,13 @@ public class LanguageSelectionFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_language, container, false);
+    }
+
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        Button infoButton = view.findViewById(R.id.Next);
+        infoButton.setOnClickListener(v -> {
+            NavController navController = Navigation.findNavController(v);
+            navController.navigate(R.id.action_languageFragment_to_roleFragment);
+        });
     }
 }

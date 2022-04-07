@@ -20,6 +20,8 @@
     <!-- Roles -->
     <string name="helper">Helper</string>
     <string name="seeker">Seeker</string>
+    <string name="next_page">></string>
+
 
 
 </resources>
