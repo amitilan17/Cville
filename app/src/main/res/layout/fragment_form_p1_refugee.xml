@@ -12,7 +12,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/reka4"
-    tools:context=".RegisterP1RefFragment">
+    tools:context=".RegisterP3RefFragment">
 
 
     <View
@@ -75,7 +75,6 @@
         android:background="#F5EBEB"
         android:paddingHorizontal="8dp"
         android:ems="10"
-        android:hint="please enter your location"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.841"
