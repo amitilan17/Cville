@@ -13,19 +13,41 @@
         android:text="@string/CVille"
         app:layout_constraintBottom_toTopOf="@id/Info"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/DummyProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dummy_profile"
+        android:id="@+id/ProfileBox"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:text=" "
         app:layout_constraintBottom_toTopOf="@id/textview_first"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/connection_box"
+        />
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="@id/ProfileBox"
+        app:layout_constraintBottom_toBottomOf="@id/ProfileBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/ProfileBox"
+        app:layout_constraintBottom_toBottomOf="@id/ProfileBox"
+        app:layout_constraintStart_toEndOf="@id/profile_image"
+        android:layout_marginLeft="20dp"
+        tools:text="Naoto Fukasawa"
         />
 
     <Button
@@ -56,8 +78,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/NewConnection"
-        app:layout_constraintTop_toBottomOf="@id/Info"
-        app:layout_constraintVertical_bias="0.502" />
+        app:layout_constraintTop_toBottomOf="@id/Info" />
 
     <Button
         android:id="@+id/NewConnection"

@@ -18,14 +18,7 @@ import android.widget.Button;
  */
 public class RoleSelectionFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private String role = "";
 
     public RoleSelectionFragment() {
         // Required empty public constructor
@@ -43,9 +36,6 @@ public class RoleSelectionFragment extends Fragment {
     public static RoleSelectionFragment newInstance(String param1, String param2) {
         RoleSelectionFragment fragment = new RoleSelectionFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
@@ -53,8 +43,8 @@ public class RoleSelectionFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+//            mParam1 = getArguments().getString(ARG_PARAM1);
+//            mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
 
@@ -66,10 +56,25 @@ public class RoleSelectionFragment extends Fragment {
     }
 
     public void onViewCreated(View view, Bundle savedInstanceState) {
+        Button helperButton = view.findViewById(R.id.Helper);
+        helperButton.setOnClickListener(v -> {
+            role = "helper";
+        });
+
+        Button seekerButton = view.findViewById(R.id.Seeker);
+        seekerButton.setOnClickListener(v -> {
+            role = "seeker";
+        });
+
         Button infoButton = view.findViewById(R.id.Next);
         infoButton.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(v);
-            navController.navigate(R.id.action_roleFragment_to_registerFragment);
+            switch (role){
+                case "helper":
+                    navController.navigate(R.id.action_roleSelectionFragment_to_registerP1HelperFragment);
+                case "seeker":
+                    navController.navigate(R.id.action_roleSelectionFragment_to_registerP1HelperFragment);
+            }
         });
     }
 }
