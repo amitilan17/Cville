@@ -56,7 +56,6 @@ class MainActivity : AppCompatActivity() {
         val signInIntent = AuthUI.getInstance()
             .createSignInIntentBuilder()
             .setAvailableProviders(providers)
-            // TODO: add logo and theme
 //            .setLogo(R.drawable.my_great_logo) // Set logo drawable
 //            .setTheme(R.style.MySuperAppTheme) // Set theme
             .build()
@@ -68,8 +67,13 @@ class MainActivity : AppCompatActivity() {
         val response = result.idpResponse
         if (result.resultCode == RESULT_OK) {
             // Successfully signed in
+
             val user = FirebaseAuth.getInstance().currentUser
-            // ...
+            if (response != null && response.isNewUser) {
+                // TODO: new user
+            } else {
+                // TODO: already logged in user
+            }
         } else {
             // Sign in failed. If response is null the user canceled the
             // sign-in flow using the back button. Otherwise check
@@ -81,7 +85,8 @@ class MainActivity : AppCompatActivity() {
     private fun createSignInIntent() {
         // Choose authentication providers
         val providers = arrayListOf(
-            AuthUI.IdpConfig.GoogleBuilder().build())
+            AuthUI.IdpConfig.GoogleBuilder().build()
+        )
 
         // Create and launch sign-in intent
         val signInIntent = AuthUI.getInstance()

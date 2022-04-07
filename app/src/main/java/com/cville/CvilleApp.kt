@@ -15,14 +15,4 @@ class CvilleApp : Application() {
 //        FirebaseApp.initializeApp(this)
     }
 
-//    fun initAuth(act: ComponentActivity) {
-//
-//        val signInLauncher = act.registerForActivityResult(
-//            FirebaseAuthUIActivityResultContract()
-//        ) { res ->
-//            this.onSignInResult(res)
-//        }
-//
-//    }
-
 }
