@@ -15,8 +15,6 @@ import androidx.navigation.fragment.findNavController
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
 class HomeFragment : Fragment() {
-    private lateinit var user: User
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,23 +33,20 @@ class HomeFragment : Fragment() {
         val profileButton = view.findViewById<Button>(R.id.ProfileBox)
         profileButton.setOnClickListener {
 //            val user = User("1111", "Amit", Firebase.auth.currentUser?.photoUrl, "My name is Amit and I need help",null)
-            ViewModelProvider(this).get(MainViewModel::class.java).getUserObj("1111") {
-                val directions = HomeFragmentDirections.actionHomeFragmentToProfileFragment(it)
-                findNavController().navigate(directions)
-            }
-//            findNavController().navigate(R.id.action_homeFragment_to_lookingForConnectionFragment)
+//            ViewModelProvider(this).get(MainViewModel::class.java).getUserObj("1111") {
+//                val directions = HomeFragmentDirections.actionHomeFragmentToProfileFragment(it)
+//                findNavController().navigate(directions)
+//            }
+            findNavController().navigate(R.id.action_homeFragment_to_lookingForConnectionFragment)
         }
 
-        val bundle = arguments
-        val args = ProfileFragmentArgs.fromBundle(bundle!!)
-        user = args.user
+        ViewModelProvider(this).get(MainViewModel::class.java).getUserObj("1111"){
+            val imageView = view.findViewById<ImageView>(R.id.profile_image)
+            MainViewModel.setProfileImgToView(requireContext(), it.image, imageView)
 
-        val imageView = view.findViewById<ImageView>(R.id.profile_image)
-        MainViewModel.setProfileImgToView(requireContext(), user.image, imageView)
-
-        val userName = view.findViewById<TextView>(R.id.name)
-        userName.text = user.name
-
+            val userName = view.findViewById<TextView>(R.id.name)
+            userName.text = it.name
+        }
 
         val infoButton = view.findViewById<Button>(R.id.Info)
         infoButton.setOnClickListener {
@@ -70,8 +65,8 @@ class HomeFragment : Fragment() {
         }
 
         val editProfileButton = view.findViewById<Button>(R.id.EditProfile)
-        newConnectionButton.setOnClickListener {
-            // TODO navigate to my profile
+        editProfileButton.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_registerP1RefugeeFragment)
         }
     }
 }

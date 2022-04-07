@@ -21,6 +21,9 @@
         <action
             android:id="@+id/action_homeFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_registerP1RefugeeFragment"
+            app:destination="@id/registerP1RefugeeFragment" />
     </fragment>
     <fragment
         android:id="@+id/infoFragment"
@@ -55,7 +58,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerP1RefugeeFragment"
-        android:name="com.cville.RegisterFragment"
+        android:name="com.cville.RegisterP1RefFragment"
         android:label="fragment_form_p1_refugee"
         tools:layout="@layout/fragment_form_p1_refugee" >
         <action
@@ -64,7 +67,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerP2RefugeeFragment"
-        android:name="com.cville.RegisterFragment"
+        android:name="com.cville.RegisterP1RefFragment"
         android:label="fragment_form_p2_refugee"
         tools:layout="@layout/fragment_form_p2_refugee" >
         <action
@@ -73,7 +76,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerP3RefugeeFragment"
-        android:name="com.cville.RegisterFragment"
+        android:name="com.cville.RegisterP1RefFragment"
         android:label="fragment_form_p3_refugee"
         tools:layout="@layout/fragment_form_p3_refugee" />
     <fragment
@@ -95,7 +98,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerP1HelperFragment"
-        android:name="com.cville.RegisterFragment"
+        android:name="com.cville.RegisterP1RefFragment"
         android:label="fragment_form_p1_helper"
         tools:layout="@layout/fragment_form_p1_helper" >
         <action
@@ -104,7 +107,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerP2HelperFragment"
-        android:name="com.cville.RegisterFragment"
+        android:name="com.cville.RegisterP1RefFragment"
         android:label="fragment_form_p2_helper"
         tools:layout="@layout/fragment_form_p2_helper" >
         <action
@@ -113,7 +116,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerP3HelperFragment"
-        android:name="com.cville.RegisterFragment"
+        android:name="com.cville.RegisterP1RefFragment"
         android:label="fragment_form_p3_helper"
         tools:layout="@layout/fragment_form_p3_helper" />
     <fragment

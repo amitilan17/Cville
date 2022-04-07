@@ -16,39 +16,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/ProfileBox"
-        android:layout_width="300dp"
-        android:layout_height="120dp"
-        android:text=" "
-        app:layout_constraintBottom_toTopOf="@id/textview_first"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/connection_box"
-        />
 
     <ImageView
         android:id="@+id/profile_image"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:layout_constraintTop_toTopOf="@id/ProfileBox"
         app:layout_constraintBottom_toBottomOf="@id/ProfileBox"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_bias="0.25"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ProfileBox" />
 
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/ProfileBox"
+        android:layout_marginStart="20dp"
         app:layout_constraintBottom_toBottomOf="@id/ProfileBox"
         app:layout_constraintStart_toEndOf="@id/profile_image"
-        android:layout_marginLeft="20dp"
-        tools:text="Naoto Fukasawa"
-        />
+        app:layout_constraintTop_toTopOf="@id/ProfileBox"
+        tools:text="Naoto Fukasawa" />
+
+    <Button
+        android:id="@+id/ProfileBox"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:background="@drawable/connection_box"
+        app:layout_constraintBottom_toTopOf="@id/textview_first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:translationZ="-1dp"/>
 
     <Button
         android:id="@+id/Info"
@@ -65,19 +63,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/help"
-        app:layout_constraintStart_toEndOf="@id/Info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first"/>
+        app:layout_constraintStart_toEndOf="@id/Info"
+        app:layout_constraintTop_toBottomOf="@id/textview_first" />
 
     <Button
         android:id="@+id/EditProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/edit_profile"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/NewConnection"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Info" />
 
     <Button
@@ -85,8 +83,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/new_connection"
-        app:layout_constraintStart_toEndOf="@id/EditProfile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Help"/>
+        app:layout_constraintStart_toEndOf="@id/EditProfile"
+        app:layout_constraintTop_toBottomOf="@id/Help" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -37,5 +37,11 @@
     <string name="no_match_text">No match found. We will let you know blabla</string>
     <string name="no_match_button">Home</string>
 
+    <!-- Forms-->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>
