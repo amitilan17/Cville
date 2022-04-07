@@ -16,11 +16,11 @@
 
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/separator_4"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:background="#cccccc"
         app:layout_constraintTop_toBottomOf="@id/haveRelativesForm_p1_ref"
         tools:layout_editor_absoluteX="8dp" />
@@ -32,22 +32,11 @@
         android:layout_marginTop="56dp"
         android:text="Registration"
         android:textColor="#090909"
-        android:textSize="22sp"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
-    <!--    <EditText-->
-<!--        android:id="@+id/others"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="340dp"-->
-<!--        android:ems="10"-->
-<!--        android:hint="others:"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 
     <EditText
@@ -57,6 +46,7 @@
         android:layout_marginTop="148dp"
         android:background="#F5EBEB"
         android:ems="10"
+        android:paddingHorizontal="8dp"
         android:hint="please enter your name"
         android:textColor="#090909"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +57,7 @@
     <TextView
         android:id="@+id/haveRelativesForm_p1_ref"
         android:layout_width="234dp"
-        android:layout_height="81dp"
+        android:layout_height="40dp"
         android:layout_marginTop="396dp"
         android:text="I have relatives\n in Israel"
         android:textColor="#090909"
@@ -83,6 +73,7 @@
         android:layout_height="29dp"
         android:layout_marginTop="316dp"
         android:background="#F5EBEB"
+        android:paddingHorizontal="8dp"
         android:ems="10"
         android:hint="please enter your location"
         android:textColor="#090909"
@@ -125,54 +116,36 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="68dp"
-            android:src="@drawable/Line_new" />
-
 
     </RadioGroup>
 
     <TextView
         android:id="@+id/PersonsNum_p1_ref"
-        android:layout_width="266dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="516dp"
+        android:layout_width="260dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="24dp"
         android:text="Number of persons \nin the family"
         android:textColor="#090909"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.227"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/separator_4" />
 
     <Spinner
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:foreground="#F5EBEB"
-        app:layout_constraintBottom_toBottomOf="@id/PersonsNum"
-        app:layout_constraintTop_toTopOf="@id/PersonsNum"
-        app:layout_constraintEnd_toEndOf="@id/third_separator"/>
+        app:layout_constraintTop_toTopOf="@id/PersonsNum_p1_ref"
+        app:layout_constraintEnd_toEndOf="@id/separator_4"/>
 
-    <TextView
-        android:id="@+id/locationForm"
-        android:layout_width="83dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="248dp"
-        android:text="Location"
-        android:textColor="#090909"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <View
+        android:id="@+id/separator_3"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="24dp"
         android:background="#cccccc"
         app:layout_constraintTop_toBottomOf="@id/locationForm_p1_ref"
         tools:layout_editor_absoluteX="60dp" />
@@ -191,25 +164,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
+        android:id="@+id/separator_2"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="24dp"
         android:background="#cccccc"
         app:layout_constraintTop_toBottomOf="@id/genderForm_p1_ref"
         tools:layout_editor_absoluteX="60dp" />
 
     <View
-        android:id="@+id/third_separator"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="36dp"
-        android:background="#cccccc"
-        app:layout_constraintTop_toBottomOf="@id/genderForm_p1_ref"
-        tools:layout_editor_absoluteX="60dp" />
-
-    <View
+        android:id="@+id/separator_1"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginHorizontal="60dp"
@@ -291,20 +256,6 @@
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/Location_p1_ref"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/next_page"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
-
-
-    </RadioGroup>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2_p1_ref"
