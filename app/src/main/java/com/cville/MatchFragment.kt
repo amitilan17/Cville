@@ -1,7 +1,7 @@
 package com.cville
 
 import android.annotation.SuppressLint
-import android.net.Uri
+import android.media.Image
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,12 +11,13 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class ProfileFragment() : Fragment() {
+class MatchFragment() : Fragment() {
 
     private lateinit var user: User
 
@@ -24,7 +25,7 @@ class ProfileFragment() : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        return inflater.inflate(R.layout.fragment_match, container, false)
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
@@ -32,18 +33,24 @@ class ProfileFragment() : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val bundle = arguments
-        val args = ProfileFragmentArgs.fromBundle(bundle!!)
+        val args = MatchFragmentArgs.fromBundle(bundle!!)
         user = args.user
+
+        val nextButton = view.findViewById<Button>(R.id.next)
+        nextButton.setOnClickListener {
+            findNavController().navigate(R.id.action_matchFragment_to_lookingForConnectionFragment)
+        }
 
         val chatButton = view.findViewById<Button>(R.id.chat)
         chatButton.setOnClickListener {
             findNavController().navigate(R.id.action_profileFragment_to_chatFragment)
         }
 
-        val imageView = view.findViewById<ImageView>(R.id.profile_image)
-        MainViewModel.setProfileImgToView(requireContext(), user.image, imageView)
+//        val userImage = view.findViewById<ImageView>(R.id.image)
+//        userImage.setImageDrawable(requireContext().getDrawable(user.imageRes))
 
         val userDescription = view.findViewById<TextView>(R.id.description)
         userDescription.text = user.description
+
     }
 }
