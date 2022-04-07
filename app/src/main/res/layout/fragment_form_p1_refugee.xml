@@ -80,6 +80,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Spinner
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:foreground="#F5EBEB"
+        app:layout_constraintBottom_toBottomOf="@id/PersonsNum"
+        app:layout_constraintTop_toTopOf="@id/PersonsNum"
+        app:layout_constraintEnd_toEndOf="@id/third_separator"/>
+
     <TextView
         android:id="@+id/locationForm"
         android:layout_width="83dp"
@@ -125,6 +133,7 @@
         tools:layout_editor_absoluteX="60dp" />
 
     <View
+        android:id="@+id/third_separator"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginHorizontal="60dp"
@@ -215,30 +224,38 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="68dp"
-            android:src="@drawable/Line_new" />
 
 
     </RadioGroup>
-
-    <Button
-        android:id="@+id/Location"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/next_page"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/next_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        app:borderWidth="0dp"
+        android:scaleX=".5"
+        android:scaleY=".5"
+        android:src="@drawable/next_arrow"
+        android:layout_margin="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@id/next_fab"
+        app:layout_constraintTop_toTopOf="@id/next_fab"
+        app:layout_constraintBottom_toBottomOf="@id/next_fab"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
