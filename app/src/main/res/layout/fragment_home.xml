@@ -18,10 +18,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/DummyProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_profile"
+        app:layout_constraintBottom_toTopOf="@id/textview_first"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
         android:id="@+id/Info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Info"
+        android:text="@string/info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/Help"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +42,7 @@
         android:id="@+id/Help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Help"
+        android:text="@string/help"
         app:layout_constraintStart_toEndOf="@id/Info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,10 +52,9 @@
         android:id="@+id/EditProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="EditProfile"
+        android:text="@string/edit_profile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/NewConnection"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Info"
         app:layout_constraintVertical_bias="0.502" />
 
@@ -52,7 +62,7 @@
         android:id="@+id/NewConnection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Connection"
+        android:text="@string/new_connection"
         app:layout_constraintStart_toEndOf="@id/EditProfile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

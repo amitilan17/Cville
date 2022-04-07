@@ -23,5 +23,17 @@
     <string name="next_page">></string>
 
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Profile -->
+    <string name="chat">Chat</string>
+
+    <!--Home -->
+    <string name="info">Info</string>
+    <string name="help">Help</string>
+    <string name="new_connection">New Connection</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="dummy_profile">Dummy Profile</string>
 
 </resources>

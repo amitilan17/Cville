@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 
 /**
@@ -24,6 +25,13 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val profileButton = view.findViewById<Button>(R.id.DummyProfile)
+        profileButton.setOnClickListener {
+            val user = User("1111", "Amit", R.drawable.plus, "My name is Amit and I need help",null)
+            val directions= HomeFragmentDirections.actionHomeFragmentToProfileFragment(user)
+            findNavController().navigate(directions)
+        }
 
         val infoButton = view.findViewById<Button>(R.id.Info)
         infoButton.setOnClickListener {
