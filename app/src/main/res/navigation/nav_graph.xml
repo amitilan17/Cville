@@ -28,18 +28,18 @@
         tools:layout="@layout/fragment_help" />
     <fragment
         android:id="@+id/languageFragment"
-        android:name="com.cville.LanguageFragment"
+        android:name="com.cville.LanguageSelectionFragment"
         android:label="fragment_language"
         tools:layout="@layout/fragment_language" >
         <action
             android:id="@+id/action_languageFragment_to_roleFragment"
-            app:destination="@id/roleFragment" />
+            app:destination="@id/roleSelectionFragment" />
     </fragment>
     <fragment
-        android:id="@+id/roleFragment"
-        android:name="com.cville.RoleFragment"
-        android:label="fragment_role"
-        tools:layout="@layout/fragment_role" >
+        android:id="@+id/roleSelectionFragment"
+        android:name="com.cville.RoleSelectionFragment"
+        android:label="fragment_role_selection"
+        tools:layout="@layout/fragment_role_selection" >
         <action
             android:id="@+id/action_roleFragment_to_registerFragment"
             app:destination="@id/registerFragment" />

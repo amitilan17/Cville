@@ -10,17 +10,18 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="CVille">CVille</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <!-- Strings used for Registration form - refuge -->
-    <string name="title">Registration form</string>
-    <string name="helper_name">Full name</string>
-    <string name="others">Others:</string>
-    <string name="where">I am currently located in</string>
-    <string name="help_kinds">I would like to get help in the following:</string>
-    <string name="conditions">cloths</string>
+
+    <!-- Languages -->
+    <string name="russian">Русский</string>
+    <string name="english">English</string>
+    <string name="hebrew">עברית</string>
+    <string name="ukranian">украї́нська</string>
+
+    <!-- Roles -->
+    <string name="helper">Helper</string>
+    <string name="seeker">Seeker</string>
+    <string name="next_page">></string>
+
 
 
 </resources>
-
-
-
