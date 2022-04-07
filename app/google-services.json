@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "889936490929",
+    "project_id": "cville-57446",
+    "storage_bucket": "cville-57446.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889936490929:android:86d448be61f2bb04120d90",
+        "android_client_info": {
+          "package_name": "com.cville"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889936490929-c8ipesfd2o1ocg8r5avlmindfdb4p3pb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cville",
+            "certificate_hash": "ee6c68f79429b1849d52744fb1790a781b525f10"
+          }
+        },
+        {
+          "client_id": "889936490929-go5ca9unpe54ub3ada3lc0e8nee076ga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB43XkUBqsweHrzSLn2oe9JKHYmnt7CMo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889936490929-go5ca9unpe54ub3ada3lc0e8nee076ga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
