@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/genderRefugeeForm"
+        android:id="@+id/genderForm"
         android:layout_width="83dp"
         android:layout_height="32dp"
         android:layout_marginTop="132dp"
@@ -101,7 +101,7 @@
 <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <TextView
-        android:id="@+id/location__"
+        android:id="@+id/PersonsNum"
         android:layout_width="266dp"
         android:layout_height="62dp"
         android:layout_marginTop="440dp"
@@ -114,7 +114,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/location_"
+        android:id="@+id/locationForm"
         android:layout_width="83dp"
         android:layout_height="32dp"
         android:layout_marginTop="272dp"
@@ -150,7 +150,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <RadioButton
-            android:id="@+id/female"
+            android:id="@+id/Yes"
             android:layout_width="wrap_content"
             android:layout_height="33dp"
             android:onClick="radioButtonhandler"
@@ -170,7 +170,7 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/names"
+        android:id="@+id/enterLocationForm"
         android:layout_width="209dp"
         android:layout_height="29dp"
         android:layout_marginTop="272dp"
@@ -184,7 +184,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/gender"
+        android:id="@+id/haveRelativesForm"
         android:layout_width="234dp"
         android:layout_height="81dp"
         android:layout_marginTop="332dp"
@@ -206,11 +206,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-53dp"
-        tools:layout_editor_absoluteY="-56dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
