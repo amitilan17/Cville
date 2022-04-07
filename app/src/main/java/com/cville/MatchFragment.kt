@@ -46,11 +46,10 @@ class MatchFragment() : Fragment() {
             findNavController().navigate(R.id.action_profileFragment_to_chatFragment)
         }
 
-//        val userImage = view.findViewById<ImageView>(R.id.image)
-//        userImage.setImageDrawable(requireContext().getDrawable(user.imageRes))
+        val imageView = view.findViewById<ImageView>(R.id.match_image)
+        MainViewModel.setProfileImgToView(requireContext(), user.image, imageView)
 
         val userDescription = view.findViewById<TextView>(R.id.description)
         userDescription.text = user.description
-
     }
 }
