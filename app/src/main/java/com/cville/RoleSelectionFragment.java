@@ -67,11 +67,14 @@ public class RoleSelectionFragment extends Fragment {
         });
 
         Button infoButton = view.findViewById(R.id.Next);
-        Bundle bundle = new Bundle();
-        bundle.putString("role", role);
         infoButton.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(v);
-            navController.navigate(R.id.action_roleFragment_to_registerFragment, bundle);
+            switch (role){
+                case "helper":
+                    navController.navigate(R.id.action_roleSelectionFragment_to_registerP1HelperFragment);
+                case "seeker":
+                    navController.navigate(R.id.action_roleSelectionFragment_to_registerP1HelperFragment);
+            }
         });
     }
 }

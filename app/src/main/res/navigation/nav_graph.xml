@@ -50,14 +50,35 @@
         android:label="fragment_role_selection"
         tools:layout="@layout/fragment_role_selection" >
         <action
-            android:id="@+id/action_roleFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
+            android:id="@+id/action_roleSelectionFragment_to_registerP1RefugeeFragment"
+            app:destination="@id/registerP1RefugeeFragment" />
+        <action
+            android:id="@+id/action_roleSelectionFragment_to_registerP1HelperFragment"
+            app:destination="@id/registerP1HelperFragment" />
     </fragment>
     <fragment
-        android:id="@+id/registerFragment"
+        android:id="@+id/registerP1RefugeeFragment"
         android:name="com.cville.RegisterFragment"
-        android:label="fragment_register"
-        tools:layout="@layout/fragment_form_p1_refugee" />
+        android:label="fragment_form_p1_refugee"
+        tools:layout="@layout/fragment_form_p1_refugee" >
+        <action
+            android:id="@+id/action_registerP1RefugeeFragment_to_registerP2RefugeeFragment"
+            app:destination="@id/registerP2RefugeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerP2RefugeeFragment"
+        android:name="com.cville.RegisterFragment"
+        android:label="fragment_form_p2_refugee"
+        tools:layout="@layout/fragment_form_p2_refugee" >
+        <action
+            android:id="@+id/action_registerP2RefugeeFragment_to_registerP3RefugeeFragment"
+            app:destination="@id/registerP3RefugeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerP3RefugeeFragment"
+        android:name="com.cville.RegisterFragment"
+        android:label="fragment_form_p3_refugee"
+        tools:layout="@layout/fragment_form_p3_refugee" />
     <fragment
         android:id="@+id/matchFragment"
         android:name="com.cville.MatchFragment"
@@ -74,6 +95,29 @@
             android:id="@+id/action_matchFragment_to_lookingForConnectionFragment"
             app:destination="@id/lookingForConnectionFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/registerP1HelperFragment"
+        android:name="com.cville.RegisterFragment"
+        android:label="fragment_form_p1_helper"
+        tools:layout="@layout/fragment_form_p1_helper" >
+        <action
+            android:id="@+id/action_registerP1HelperFragment_to_registerP2HelperFragment"
+            app:destination="@id/registerP2HelperFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerP2HelperFragment"
+        android:name="com.cville.RegisterFragment"
+        android:label="fragment_form_p2_helper"
+        tools:layout="@layout/fragment_form_p2_helper" >
+        <action
+            android:id="@+id/action_registerP2HelperFragment_to_registerP3HelperFragment"
+            app:destination="@id/registerP3HelperFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerP3HelperFragment"
+        android:name="com.cville.RegisterFragment"
+        android:label="fragment_form_p3_helper"
+        tools:layout="@layout/fragment_form_p3_helper" />
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.cville.ProfileFragment"
