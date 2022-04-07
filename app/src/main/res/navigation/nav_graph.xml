@@ -51,7 +51,7 @@
         android:id="@+id/registerFragment"
         android:name="com.cville.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register1" />
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.cville.ProfileFragment"
