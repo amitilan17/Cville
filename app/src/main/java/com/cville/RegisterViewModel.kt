@@ -1,11 +1,15 @@
 package com.cville
 
-import android.os.Debug
 import android.util.Log
 import androidx.lifecycle.ViewModel
 
 class RegisterViewModel : ViewModel() {
     var user: User = User()
+
+    init {
+
+        Log.d("eilon", "222")
+    }
 
     fun setP1Ref(
         name: String,

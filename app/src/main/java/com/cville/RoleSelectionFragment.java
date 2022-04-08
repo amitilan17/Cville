@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -56,17 +57,17 @@ public class RoleSelectionFragment extends Fragment {
     }
 
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Button helperButton = view.findViewById(R.id.helper_button);
+        ImageButton helperButton = view.findViewById(R.id.helper_button);
         helperButton.setOnClickListener(v -> {
             role = "helper";
         });
 
-        Button seekerButton = view.findViewById(R.id.refugee_button);
+        ImageButton seekerButton = view.findViewById(R.id.refugee_button);
         seekerButton.setOnClickListener(v -> {
             role = "seeker";
         });
 
-        Button infoButton = view.findViewById(R.id.next_fab_p2_ref);
+        ImageButton infoButton = view.findViewById(R.id.next_fab_role);
         infoButton.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(v);
             switch (role){
