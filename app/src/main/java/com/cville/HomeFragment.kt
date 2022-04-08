@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -35,7 +36,7 @@ class HomeFragment : Fragment() {
 //            val userName = view.findViewById<TextView>(R.id.name)
 //            userName.text = it.name
 //        }
-        val profileButton = view.findViewById<Button>(R.id.ProfileBox)
+        val profileButton = view.findViewById<ImageButton>(R.id.ProfileBox)
         profileButton.setOnClickListener {
 //            val user = User("1111", "Amit", Firebase.auth.currentUser?.photoUrl, "My name is Amit and I need help",null)
 //            ViewModelProvider(this).get(MainViewModel::class.java).getUserObj("1111") {
@@ -53,24 +54,24 @@ class HomeFragment : Fragment() {
             userName.text = it.name
         }, {})
 
-//        val infoButton = view.findViewById<Button>(R.id.Info)
+//        val infoButton = view.findViewById<ImageButton>(R.id.Info)
 //        infoButton.setOnClickListener {
 //            findNavController().navigate(R.id.action_homeFragment_to_infoFragment)
 //        }
 //
-//        val helpButton = view.findViewById<Button>(R.id.Help)
+//        val helpButton = view.findViewById<ImageButton>(R.id.Help)
 //        helpButton.setOnClickListener {
 //            findNavController().navigate(R.id.action_homeFragment_to_helpFragment)
 //        }
 //
-//        val newConnectionButton = view.findViewById<Button>(R.id.NewConnection)
+//        val newConnectionButton = view.findViewById<ImageButton>(R.id.NewConnection)
 //        newConnectionButton.setOnClickListener {
 //            // activate searching algorithm to get connection
 //            // navigate to profile frag for given connection
 //        }
 
         // todo: make sure edit fragments show previous fields
-        val editProfileButton = view.findViewById<Button>(R.id.EditProfile)
+        val editProfileButton = view.findViewById<ImageButton>(R.id.EditProfile)
         editProfileButton.setOnClickListener {
             ViewModelProvider(requireActivity()).get(MainViewModel::class.java).loadMainUser {
                 ViewModelProvider(requireActivity()).get(RegisterViewModel::class.java).user = it
