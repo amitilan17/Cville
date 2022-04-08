@@ -42,10 +42,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/enterLocationForm_p1_ref"
+        android:id="@+id/enterLocationForm_p3_ref"
         android:layout_width="228dp"
         android:layout_height="105dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="300dp"
         android:background="#F5EBEB"
         android:ems="10"
         android:hint="please enter your location"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/next_fab"
+        android:id="@+id/next_fab_p3_ref"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
@@ -72,12 +72,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:text="Finish"
         android:textColor="@color/black"
         android:textSize="22sp"
-        app:layout_constraintEnd_toStartOf="@id/next_fab"
-        app:layout_constraintTop_toTopOf="@id/next_fab"
-        app:layout_constraintBottom_toBottomOf="@id/next_fab"/>
+        app:layout_constraintEnd_toStartOf="@id/next_fab_p3_ref"
+        app:layout_constraintTop_toTopOf="@id/next_fab_p3_ref"
+        app:layout_constraintBottom_toBottomOf="@id/next_fab_p3_ref"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

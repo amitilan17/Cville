@@ -11,10 +11,6 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
-/**
- * A simple [Fragment] subclass.
- * create an instance of this fragment.
- */
 class RegisterP1RefFragment : Fragment() {
     private lateinit var viewModel: RegisterViewModel
 
@@ -34,7 +30,7 @@ class RegisterP1RefFragment : Fragment() {
             ArrayAdapter<Int>(
                 requireContext(),
                 android.R.layout.simple_spinner_item,
-                (0..10).toList()
+                (1..5).toList()
             )
         spinner.adapter = adapter
 
@@ -45,22 +41,22 @@ class RegisterP1RefFragment : Fragment() {
         val location = view.findViewById<TextView>(R.id.locationForm_p1_ref)
         val relatives = view.findViewById<RadioGroup>(R.id.radioGroup_relatives_p1_ref)
 
-        val nextButton = view.findViewById<FloatingActionButton>(R.id.next_fab)
-        nextButton.setOnClickListener {
-            val genderString =
-                view.findViewById<RadioButton>(gender.checkedRadioButtonId).text.toString()
-            val relativesString =
-                view.findViewById<RadioButton>(relatives.checkedRadioButtonId).text.toString()
-            val relativesBool = resources.getString(R.string.yes) == relativesString
+        view.findViewById<FloatingActionButton>(R.id.next_fab_p1_ref)
+            .setOnClickListener {
+                val genderString =
+                    view.findViewById<RadioButton>(gender.checkedRadioButtonId).text.toString()
+                val relativesString =
+                    view.findViewById<RadioButton>(relatives.checkedRadioButtonId).text.toString()
+                val relativesBool = resources.getString(R.string.yes) == relativesString
 
-            viewModel.setP1Ref(
-                name = name.text.toString(),
-                gender = genderString,
-                location = location.text.toString(),
-                withFamily = relativesBool,
-                personsNumber = spinner.selectedItem.toString().toInt()
-            )
-            findNavController().navigate(R.id.action_registerP1RefugeeFragment_to_registerP2RefugeeFragment)
-        }
+                viewModel.setP1Ref(
+                    name = name.text.toString(),
+                    gender = genderString,
+                    location = location.text.toString(),
+                    withFamily = relativesBool,
+                    personsNumber = spinner.selectedItem.toString().toInt()
+                )
+                findNavController().navigate(R.id.action_registerP1RefugeeFragment_to_registerP2RefFragment)
+            }
     }
 }

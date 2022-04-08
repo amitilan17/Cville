@@ -13,7 +13,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".RegisterP1RefFragment">
+tools:context=".RegisterP2RefFragment">
 
 <TextView
     android:id="@+id/title"
@@ -160,7 +160,7 @@ tools:context=".RegisterP1RefFragment">
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/Next"
+        android:id="@+id/next_fab_p2_ref"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:text="@string/next_page"

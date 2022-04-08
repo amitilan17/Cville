@@ -160,7 +160,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/Next"
+        android:id="@+id/next_fab_p2_ref"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:text="@string/next_page"

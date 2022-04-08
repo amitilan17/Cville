@@ -66,7 +66,7 @@ public class RoleSelectionFragment extends Fragment {
             role = "seeker";
         });
 
-        Button infoButton = view.findViewById(R.id.Next);
+        Button infoButton = view.findViewById(R.id.next_fab_p2_ref);
         infoButton.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(v);
             switch (role){

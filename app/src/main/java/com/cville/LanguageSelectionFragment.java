@@ -67,7 +67,7 @@ public class LanguageSelectionFragment extends Fragment {
     }
 
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Button infoButton = view.findViewById(R.id.Next);
+        Button infoButton = view.findViewById(R.id.next_fab_p2_ref);
         infoButton.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(v);
             navController.navigate(R.id.action_languageFragment_to_roleFragment);
