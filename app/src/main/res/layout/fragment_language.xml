@@ -16,6 +16,19 @@
 
 
     <ImageButton
+        android:id="@+id/Russian"
+        android:layout_width="189dp"
+        android:layout_height="66dp"
+        android:background="@drawable/russion"
+        android:text="@string/russian"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="200dp"
+        tools:layout_editor_absoluteY="169dp" />
+
+    <ImageButton
         android:id="@+id/Ukranian"
         android:layout_width="170dp"
         android:layout_height="64dp"
@@ -24,6 +37,8 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Russian"
+        android:layout_marginTop="30dp"
         tools:layout_editor_absoluteY="261dp" />
 
     <ImageButton
@@ -35,6 +50,8 @@
         app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Ukranian"
+        android:layout_marginTop="30dp"
         tools:layout_editor_absoluteY="463dp" />
 
     <ImageButton
@@ -46,18 +63,10 @@
         app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hebraw"
+        android:layout_marginTop="30dp"
         tools:layout_editor_absoluteY="365dp" />
 
-    <ImageButton
-        android:id="@+id/Russian"
-        android:layout_width="189dp"
-        android:layout_height="66dp"
-        android:background="@drawable/russion"
-        android:text="@string/russian"
-        app:layout_constraintHorizontal_bias="0.54"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="169dp" />
 
     <TextView
         android:id="@+id/titleForm_p1_ref"
