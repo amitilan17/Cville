@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -67,7 +69,7 @@ public class LanguageSelectionFragment extends Fragment {
     }
 
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Button infoButton = view.findViewById(R.id.next_fab_p2_ref);
+        FloatingActionButton infoButton = view.findViewById(R.id.next_fab_p2_ref);
         infoButton.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(v);
             navController.navigate(R.id.action_languageFragment_to_roleFragment);
