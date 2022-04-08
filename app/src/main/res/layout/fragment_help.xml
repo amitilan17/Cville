@@ -16,7 +16,7 @@
 
 
     <ImageButton
-        android:id="@+id/assaf"
+        android:id="@+id/hotline"
         android:layout_width="299dp"
         android:layout_height="85dp"
         android:background="@drawable/info_button"
@@ -32,18 +32,18 @@
         android:gravity="center"
         android:textSize="20dp"
         android:textColor="@color/black"
-        app:layout_constraintTop_toTopOf="@id/assaf"
-        app:layout_constraintBottom_toBottomOf="@id/assaf"
-        app:layout_constraintLeft_toLeftOf="@id/assaf"
-        app:layout_constraintRight_toRightOf="@id/assaf"/>
+        app:layout_constraintTop_toTopOf="@id/hotline"
+        app:layout_constraintBottom_toBottomOf="@id/hotline"
+        app:layout_constraintLeft_toLeftOf="@id/hotline"
+        app:layout_constraintRight_toRightOf="@id/hotline"/>
 
 
     <ImageButton
-        android:id="@+id/hotline"
+        android:id="@+id/assaf"
         android:layout_width="299dp"
         android:layout_height="85dp"
         android:background="@drawable/info_button"
-        app:layout_constraintTop_toBottomOf="@+id/assaf"
+        app:layout_constraintTop_toBottomOf="@+id/hotline"
         android:layout_marginTop="30dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
@@ -55,10 +55,10 @@
         android:gravity="center"
         android:textSize="20dp"
         android:textColor="@color/black"
-        app:layout_constraintTop_toTopOf="@id/hotline"
-        app:layout_constraintBottom_toBottomOf="@id/hotline"
-        app:layout_constraintLeft_toLeftOf="@id/hotline"
-        app:layout_constraintRight_toRightOf="@id/hotline"/>
+        app:layout_constraintTop_toTopOf="@id/assaf"
+        app:layout_constraintBottom_toBottomOf="@id/assaf"
+        app:layout_constraintLeft_toLeftOf="@id/assaf"
+        app:layout_constraintRight_toRightOf="@id/assaf"/>
 
     <ImageButton
         android:id="@+id/cimi"
@@ -67,7 +67,7 @@
         android:background="@drawable/info_button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hotline"
+        app:layout_constraintTop_toBottomOf="@+id/assaf"
         android:layout_marginTop="30dp"/>
 
     <TextView
