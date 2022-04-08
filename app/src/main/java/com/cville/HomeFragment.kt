@@ -64,6 +64,7 @@ class HomeFragment : Fragment() {
             // navigate to profile frag for given connection
         }
 
+        // todo: make sure edit fragments show previous fields
         val editProfileButton = view.findViewById<Button>(R.id.EditProfile)
         editProfileButton.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_registerP1RefugeeFragment)
