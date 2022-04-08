@@ -38,142 +38,140 @@
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="50dp"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent">
-
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_gravity="left"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:layout_marginTop="50dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent">
 
-                    <ImageButton
-                        android:id="@+id/clothes_button"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:background="@color/fui_transparent"
-                        android:src="@drawable/clothes_button" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-                    <ImageButton
-                        android:id="@+id/_button"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/clothes_button"
-                        android:layout_marginBottom="10dp"
-                        android:background="@color/fui_transparent"
-                        android:src="@drawable/food_button" />
+                        <ImageButton
+                            android:id="@+id/clothes_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/fui_transparent"
+                            android:src="@drawable/clothes_button" />
 
-                    <ImageButton
-                        android:id="@+id/translation_button"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:background="@color/fui_transparent"
-                        android:src="@drawable/translation_button" />
+                        <ImageButton
+                            android:id="@+id/_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/clothes_button"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/fui_transparent"
+                            android:src="@drawable/food_button" />
 
-                    <ImageButton
-                        android:id="@+id/education_button"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:background="@color/fui_transparent"
-                        android:src="@drawable/education_button" />
+                        <ImageButton
+                            android:id="@+id/translation_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/fui_transparent"
+                            android:src="@drawable/translation_button" />
 
-                    <ImageButton
-                        android:id="@+id/health_button"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:background="@color/fui_transparent"
-                        android:src="@drawable/health_button" />
+                        <ImageButton
+                            android:id="@+id/education_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/fui_transparent"
+                            android:src="@drawable/education_button" />
+
+                        <ImageButton
+                            android:id="@+id/health_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/fui_transparent"
+                            android:src="@drawable/health_button" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/transport_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/fui_transparent"
+                            android:src="@drawable/transport_button" />
+
+                        <ImageButton
+                            android:id="@+id/bearucracy_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/fui_transparent"
+                            android:src="@drawable/bearucracy_button" />
+
+                        <ImageButton
+                            android:id="@+id/accomodation_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/fui_transparent"
+                            android:src="@drawable/accomodation_button" />
+
+                        <ImageButton
+                            android:id="@+id/work_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/fui_transparent"
+                            android:src="@drawable/work_button" />
+
+                        <ImageButton
+                            android:id="@+id/other_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/fui_transparent"
+                            android:src="@drawable/other_button" />
+
+                    </LinearLayout>
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="right"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:id="@+id/transport_button"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:background="@color/fui_transparent"
-                        android:src="@drawable/transport_button" />
-
-                    <ImageButton
-                        android:id="@+id/bearucracy_button"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:background="@color/fui_transparent"
-                        android:src="@drawable/bearucracy_button" />
-
-                    <ImageButton
-                        android:id="@+id/accomodation_button"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:background="@color/fui_transparent"
-                        android:src="@drawable/accomodation_button" />
-
-                    <ImageButton
-                        android:id="@+id/work_button"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:background="@color/fui_transparent"
-                        android:src="@drawable/work_button" />
-
-                    <ImageButton
-                        android:id="@+id/other_button"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:background="@color/fui_transparent"
-                        android:src="@drawable/other_button" />
-
-                </LinearLayout>
-
-
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/next_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintRight_toLeftOf="@id/Next"
-                    app:layout_constraintTop_toTopOf="parent"
                     android:layout_marginTop="30dp"
                     android:text="Next"
                     android:textColor="@color/black"
-                    android:textSize="22sp" />
+                    android:textSize="22sp"
+                    app:layout_constraintRight_toLeftOf="@id/Next"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/Next"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="30dp"
                     android:backgroundTint="@color/fui_transparent"
                     android:scaleX=".5"
                     android:scaleY=".5"
-                    android:src="@drawable/next_arrow" />
+                    android:src="@drawable/next_arrow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
