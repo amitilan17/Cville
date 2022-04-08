@@ -96,8 +96,8 @@
             android:id="@+id/No_p1_ref"
             android:layout_width="60dp"
             android:layout_height="33dp"
-            android:onClick="radioButtonhandler"
             android:text="@string/no"
+            android:buttonTint="#F29CAF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.655"
             app:layout_constraintStart_toStartOf="parent"
@@ -146,7 +146,7 @@
         android:layout_marginHorizontal="60dp"
         android:layout_marginTop="24dp"
         android:background="#cccccc"
-        app:layout_constraintTop_toBottomOf="@id/locationForm_p1_ref"
+        app:layout_constraintTop_toBottomOf="@id/locationView_p1_ref"
         tools:layout_editor_absoluteX="60dp" />
 
     <TextView
@@ -198,7 +198,6 @@
             android:id="@+id/radioButtonM_p1_ref"
             android:layout_width="45dp"
             android:layout_height="33dp"
-            android:onClick="radioButtonhandler"
             android:text="M"
             android:textSize="16sp"
             android:buttonTint="#F29CAF"
@@ -210,7 +209,6 @@
             android:id="@+id/radioButtonF_p1_ref"
             android:layout_width="45dp"
             android:layout_height="33dp"
-            android:onClick="radioButtonhandler"
             android:text="F"
             android:textSize="16sp"
             android:buttonTint="#F29CAF"
@@ -223,7 +221,6 @@
             android:id="@+id/radioButtonOther_p1_ref"
             android:layout_width="97dp"
             android:layout_height="match_parent"
-            android:onClick="radioButtonhandler"
             android:text="Other"
             android:textSize="16sp"
             android:buttonTint="#F29CAF"

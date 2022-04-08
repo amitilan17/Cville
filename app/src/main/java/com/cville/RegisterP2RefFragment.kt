@@ -7,9 +7,11 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class RegisterP2RefFragment : Fragment() {
@@ -26,22 +28,22 @@ class RegisterP2RefFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity()).get(RegisterViewModel::class.java)
 
-        val nextButton = view.findViewById<Button>(R.id.next_fab_p2_ref)
+        val nextButton = view.findViewById<FloatingActionButton>(R.id.next_fab_p2_ref)
         nextButton.setOnClickListener {
 
             var helps: String = ""
-            helps += view.findViewById<CheckBox>(R.id.clothes_button).text
-            helps += view.findViewById<CheckBox>(R.id.transport_button).text
-            helps += view.findViewById<CheckBox>(R.id.food_button).text
-            helps += view.findViewById<CheckBox>(R.id.bearucracy_button).text
-            helps += view.findViewById<CheckBox>(R.id.translation_button).text
-            helps += view.findViewById<CheckBox>(R.id.accomodation_button).text
-            helps += view.findViewById<CheckBox>(R.id.education_button).text
-            helps += view.findViewById<EditText>(R.id.work_button).text
-            helps += view.findViewById<EditText>(R.id.health_button).text
-            helps += view.findViewById<EditText>(R.id.other_button).text
+//            helps += view.findViewById<ImageButton>(R.id.clothes_button).toString()
+//            helps += view.findViewById<ImageButton>(R.id.transport_button).toString()
+//            helps += view.findViewById<ImageButton>(R.id.food_button).toString()
+//            helps += view.findViewById<ImageButton>(R.id.bearucracy_button).toString()
+//            helps += view.findViewById<ImageButton>(R.id.translation_button).toString()
+//            helps += view.findViewById<ImageButton>(R.id.accomodation_button).toString()
+//            helps += view.findViewById<ImageButton>(R.id.education_button).toString()
+//            helps += view.findViewById<ImageButton>(R.id.work_button).toString()
+//            helps += view.findViewById<ImageButton>(R.id.health_button).toString()
+//            helps += view.findViewById<ImageButton>(R.id.other_button).toString()
 
             viewModel.user.helps = helps
 

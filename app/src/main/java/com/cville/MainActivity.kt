@@ -151,7 +151,7 @@ class MainActivity : AppCompatActivity() {
                         Log.d("eilon", "logged in as new user")
                     } else {
                         // TODO: logged in as existing user
-                        Log.d("eilon", "logged in as existing user")
+                        Log.d("eilon", "logged in as existing user" + Firebase.auth.currentUser.toString())
                     }
                 }
             }

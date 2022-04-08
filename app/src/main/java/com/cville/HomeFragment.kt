@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -28,8 +29,14 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        val profileButton = view.findViewById<Button>(R.id.message_button)
+//        ViewModelProvider(this).get(MainViewModel::class.java).loadMainUser {
+//            val imageView = view.findViewById<ImageView>(R.id.profile_image)
+//            MainViewModel.setProfileImgToView(requireContext(), it.image, imageView)
+//
+//            val userName = view.findViewById<TextView>(R.id.name)
+//            userName.text = it.name
+//        }
+        val profileButton = view.findViewById<ImageButton>(R.id.ProfileBox)
         profileButton.setOnClickListener {
 //            val user = User("1111", "Amit", Firebase.auth.currentUser?.photoUrl, "My name is Amit and I need help",null)
 //            ViewModelProvider(this).get(MainViewModel::class.java).getUserObj("1111") {
@@ -39,35 +46,36 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_homeFragment_to_lookingForConnectionFragment)
         }
 
-        ViewModelProvider(this).get(MainViewModel::class.java).getUserObj("1111") {
+        ViewModelProvider(this).get(MainViewModel::class.java).getUserObj("Zq8Eur5engREwAogfhLP5S82OTX2\n", {
             val imageView = view.findViewById<ImageView>(R.id.profile_image)
             MainViewModel.setProfileImgToView(requireContext(), it.image, imageView)
 
             val userName = view.findViewById<TextView>(R.id.name)
             userName.text = it.name
-        }
+        }, {})
 
-        val infoButton = view.findViewById<Button>(R.id.rights_info_button)
-        infoButton.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_infoFragment)
-        }
-
-        val helpButton = view.findViewById<Button>(R.id.relevant_non_profit_button)
-        helpButton.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_helpFragment)
-        }
-
-        val newConnectionButton = view.findViewById<Button>(R.id.new_connection_button)
-        newConnectionButton.setOnClickListener {
-            // activate searching algorithm to get connection
-            // navigate to profile frag for given connection
-        }
+//        val infoButton = view.findViewById<ImageButton>(R.id.Info)
+//        infoButton.setOnClickListener {
+//            findNavController().navigate(R.id.action_homeFragment_to_infoFragment)
+//        }
+//
+//        val helpButton = view.findViewById<ImageButton>(R.id.Help)
+//        helpButton.setOnClickListener {
+//            findNavController().navigate(R.id.action_homeFragment_to_helpFragment)
+//        }
+//
+//        val newConnectionButton = view.findViewById<ImageButton>(R.id.NewConnection)
+//        newConnectionButton.setOnClickListener {
+//            // activate searching algorithm to get connection
+//            // navigate to profile frag for given connection
+//        }
 
         // todo: make sure edit fragments show previous fields
-        val editProfileButton = view.findViewById<Button>(R.id.edit_profile_button)
+        val editProfileButton = view.findViewById<ImageButton>(R.id.EditProfile)
         editProfileButton.setOnClickListener {
-            ViewModelProvider(this).get(RegisterViewModel::class.java).user =
-                ViewModelProvider(this).get(MainViewModel::class.java).user
+            ViewModelProvider(requireActivity()).get(MainViewModel::class.java).loadMainUser {
+                ViewModelProvider(requireActivity()).get(RegisterViewModel::class.java).user = it
+            }
             findNavController().navigate(R.id.action_homeFragment_to_registerP1RefugeeFragment)
         }
     }
