@@ -6,48 +6,59 @@
     android:layout_height="match_parent"
     tools:context=".MatchFragment">
 
+
     <ImageView
-        android:id="@+id/match_image"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toTopOf="@id/description"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/description"
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/chat"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="few words about myself"/>
-
-    <Button
-        android:id="@+id/next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/next_profile"
-        app:layout_constraintEnd_toStartOf="@+id/chat"
-        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/description"
-        />
+        android:src="@drawable/foundmatch"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="2dp" />
 
-    <Button
+    <ImageButton
         android:id="@+id/chat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/chat"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/next"
-        app:layout_constraintTop_toBottomOf="@id/description"
-        app:layout_constraintHorizontal_chainStyle="packed"
+        android:src="@drawable/rectangle31"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginLeft="40dp"
+        app:layout_constraintStart_toEndOf="@id/next"
+        android:layout_marginTop="550dp"
+        tools:layout_editor_absoluteX="248dp"
+        tools:layout_editor_absoluteY="631dp"
+        android:backgroundTint="@color/fui_transparent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/chat"
+        app:layout_constraintStart_toStartOf="@id/chat"
+        app:layout_constraintBottom_toBottomOf="@+id/chat"
+        app:layout_constraintEnd_toEndOf="@id/chat"
+        android:text="@string/chat"
+        />
 
+    <ImageButton
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/fui_transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/chat"
+        android:layout_marginTop="550dp"
+        android:src="@drawable/rectangle32"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="550dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/next"
+        app:layout_constraintStart_toStartOf="@id/next"
+        app:layout_constraintBottom_toBottomOf="@+id/next"
+        app:layout_constraintEnd_toEndOf="@id/next"
+        android:text="@string/next_profile"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

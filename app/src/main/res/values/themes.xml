@@ -12,6 +12,8 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
     </style>
 
     <style name="Theme.Cville.NoActionBar">
@@ -23,4 +25,5 @@
     <style name="Theme.Cville.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Cville.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

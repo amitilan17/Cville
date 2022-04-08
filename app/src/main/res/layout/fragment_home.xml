@@ -4,40 +4,126 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/home_page_bg"
-    tools:context=".HomeFragment">
+    tools:context=".HomeFragment"
+    android:background="@drawable/home_page_bg">
 
-    <Button
-        android:id="@+id/ProfileBox"
-        android:layout_width="300dp"
-        android:layout_height="120dp"
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="55dp"
+        android:textSize="35dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Hello Nurit," /> <!-- TODO: connect to user name -->
+
+    <ImageButton
+        android:id="@+id/message_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/message_button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
+        android:layout_marginTop="210dp"
+        android:backgroundTint="@color/fui_transparent"
         />
 
-    <ImageView
-        android:id="@+id/profile_image"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="@id/ProfileBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/ProfileBox" />
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        tools:text="Chat with Someone"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@id/message_button"
+        app:layout_constraintBottom_toBottomOf="@id/message_button"
+        app:layout_constraintLeft_toLeftOf="@id/message_button"
+        android:layout_marginLeft="40dp"/>
 
-<!--    <TextView-->
-<!--        android:id="@+id/name"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="20dp"-->
-<!--        android:layout_marginLeft="20dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="@id/ProfileBox"-->
-<!--        app:layout_constraintStart_toEndOf="@id/profile_image"-->
-<!--        app:layout_constraintTop_toTopOf="@id/ProfileBox"-->
-<!--        tools:text="Naoto Fukasawa" />-->
 
+    <ImageButton
+        android:id="@+id/edit_profile_button"
+        android:layout_width="135dp"
+        android:layout_height="82dp"
+        android:background="@drawable/gradient_border_text_box"
+        app:layout_constraintTop_toBottomOf="@id/message_button"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/message_button"/>
+
+
+    <TextView
+        android:id="@+id/edit_profile_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit profile"
+        app:layout_constraintTop_toTopOf="@id/edit_profile_button"
+        app:layout_constraintBottom_toBottomOf="@id/edit_profile_button"
+        app:layout_constraintLeft_toLeftOf="@id/edit_profile_button"
+        app:layout_constraintRight_toRightOf="@id/edit_profile_button"/>
+
+    <ImageButton
+        android:id="@+id/relevant_non_profit_button"
+        android:layout_width="135dp"
+        android:layout_height="82dp"
+        android:background="@drawable/gradient_border_text_box"
+        app:layout_constraintTop_toBottomOf="@id/edit_profile_button"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/message_button" />
+
+
+    <TextView
+        android:id="@+id/relevant_non_profit_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Relevant non-profit"
+        app:layout_constraintTop_toTopOf="@id/relevant_non_profit_button"
+        app:layout_constraintBottom_toBottomOf="@id/relevant_non_profit_button"
+        app:layout_constraintLeft_toLeftOf="@id/relevant_non_profit_button"
+        app:layout_constraintRight_toRightOf="@id/edit_profile_button"/>
+
+
+    <ImageButton
+        android:id="@+id/new_connection_button"
+        android:layout_width="135dp"
+        android:layout_height="82dp"
+        android:background="@drawable/gradient_border_text_box"
+        app:layout_constraintTop_toBottomOf="@id/message_button"
+        android:layout_marginTop="20dp"
+        app:layout_constraintRight_toRightOf="@id/message_button"/>
+
+
+    <TextView
+        android:id="@+id/new_connection_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New connection"
+        app:layout_constraintTop_toTopOf="@id/new_connection_button"
+        app:layout_constraintBottom_toBottomOf="@id/new_connection_button"
+        app:layout_constraintRight_toRightOf="@id/new_connection_button"
+        app:layout_constraintLeft_toLeftOf="@id/new_connection_button"/>
+
+    <ImageButton
+        android:id="@+id/rights_info_button"
+        android:layout_width="135dp"
+        android:layout_height="82dp"
+        android:background="@drawable/gradient_border_text_box"
+        app:layout_constraintTop_toBottomOf="@id/new_connection_button"
+        android:layout_marginTop="10dp"
+        app:layout_constraintRight_toRightOf="@id/message_button"/>
+
+
+    <TextView
+        android:id="@+id/rights_info_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rights and info"
+        app:layout_constraintTop_toTopOf="@id/rights_info_button"
+        app:layout_constraintBottom_toBottomOf="@id/rights_info_button"
+        app:layout_constraintLeft_toLeftOf="@id/rights_info_button"
+        app:layout_constraintRight_toRightOf="@id/rights_info_button"/>
 
 <!--        <Button-->
 <!--            android:id="@+id/Info"-->
@@ -57,24 +143,5 @@
 <!--            app:layout_constraintBottom_toBottomOf="parent"-->
 <!--            app:layout_constraintEnd_toEndOf="parent"/>-->
 
-        <Button
-            android:id="@+id/EditProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/edit_profile"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-<!--            app:layout_constraintEnd_toStartOf="@id/NewConnection"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/Info"-->
 
-
-<!--        <Button-->
-<!--            android:id="@+id/NewConnection"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/new_connection"-->
-<!--            app:layout_constraintStart_toEndOf="@id/EditProfile"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/Help"/>-->
 </androidx.constraintlayout.widget.ConstraintLayout>
