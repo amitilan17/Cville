@@ -29,7 +29,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        val profileButton = view.findViewById<Button>(R.id.ProfileBox)
+        val profileButton = view.findViewById<Button>(R.id.message_button)
         profileButton.setOnClickListener {
 //            val user = User("1111", "Amit", Firebase.auth.currentUser?.photoUrl, "My name is Amit and I need help",null)
 //            ViewModelProvider(this).get(MainViewModel::class.java).getUserObj("1111") {
@@ -47,24 +47,24 @@ class HomeFragment : Fragment() {
             userName.text = it.name
         }
 
-//        val infoButton = view.findViewById<Button>(R.id.Info)
-//        infoButton.setOnClickListener {
-//            findNavController().navigate(R.id.action_homeFragment_to_infoFragment)
-//        }
-//
-//        val helpButton = view.findViewById<Button>(R.id.Help)
-//        helpButton.setOnClickListener {
-//            findNavController().navigate(R.id.action_homeFragment_to_helpFragment)
-//        }
-//
-//        val newConnectionButton = view.findViewById<Button>(R.id.NewConnection)
-//        newConnectionButton.setOnClickListener {
-//            // activate searching algorithm to get connection
-//            // navigate to profile frag for given connection
-//        }
+        val infoButton = view.findViewById<Button>(R.id.rights_info_button)
+        infoButton.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_infoFragment)
+        }
+
+        val helpButton = view.findViewById<Button>(R.id.relevant_non_profit_button)
+        helpButton.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_helpFragment)
+        }
+
+        val newConnectionButton = view.findViewById<Button>(R.id.new_connection_button)
+        newConnectionButton.setOnClickListener {
+            // activate searching algorithm to get connection
+            // navigate to profile frag for given connection
+        }
 
         // todo: make sure edit fragments show previous fields
-        val editProfileButton = view.findViewById<Button>(R.id.EditProfile)
+        val editProfileButton = view.findViewById<Button>(R.id.edit_profile_button)
         editProfileButton.setOnClickListener {
             ViewModelProvider(this).get(RegisterViewModel::class.java).user =
                 ViewModelProvider(this).get(MainViewModel::class.java).user
