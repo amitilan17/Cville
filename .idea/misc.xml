@@ -3,25 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Eilon/CS/hackathon/Cville/app/src/main/res/drawable/connection_box.xml" value="0.22" />
-        <entry key="..\:/Eilon/CS/hackathon/Cville/app/src/main/res/drawable/gradient_border_text_box.xml" value="0.22" />
-        <entry key="..\:/Eilon/CS/hackathon/Cville/app/src/main/res/drawable/rounded_corner_box.xml" value="0.1215" />
-        <entry key="..\:/Eilon/CS/hackathon/Cville/app/src/main/res/layout/fragment_form_p1_helper.xml" value="0.18704710144927536" />
-        <entry key="..\:/Eilon/CS/hackathon/Cville/app/src/main/res/layout/fragment_form_p1_refugee.xml" value="0.264" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1721014492753623" />
-        <entry key="app/src/main/res/layout/content_main.xml" value="0.165" />
-        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.1721014492753623" />
+        <entry key="app/src/main/res/drawable/connection_box.xml" value="0.2775" />
+        <entry key="app/src/main/res/drawable/gradient_border_text_box.xml" value="0.2775" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2775" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.23229166666666667" />
+        <entry key="app/src/main/res/layout/fragmant_register_helper2.xml" value="0.23229166666666667" />
+        <entry key="app/src/main/res/layout/fragmant_register_helper3.xml" value="0.23229166666666667" />
         <entry key="app/src/main/res/layout/fragment_form_p1_helper.xml" value="0.23229166666666667" />
-        <entry key="app/src/main/res/layout/fragment_form_p1_refugee.xml" value="0.360054347826087" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1721014492753623" />
-        <entry key="app/src/main/res/layout/fragment_language.xml" value="0.16576086956521738" />
-        <entry key="app/src/main/res/layout/fragment_launch_screen.xml" value="0.23854064941406256" />
-        <entry key="app/src/main/res/layout/fragment_match.xml" value="0.360054347826087" />
-        <entry key="app/src/main/res/layout/fragment_no_match.xml" value="0.360054347826087" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1721014492753623" />
-        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.28894927536231885" />
-        <entry key="app/src/main/res/layout/fragment_role.xml" value="0.23229166666666667" />
-        <entry key="app/src/main/res/layout/fragment_role_selection.xml" value="0.23229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_form_p1_refugee.xml" value="0.25831298828125004" />
+        <entry key="app/src/main/res/layout/fragment_form_p2_refugee.xml" value="0.23229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_form_p3_helper.xml" value="0.23229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_form_p3_refugee.xml" value="0.2542795817057292" />
+        <entry key="app/src/main/res/layout/fragment_help.xml" value="0.23229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.23229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_info.xml" value="0.23229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_language.xml" value="0.25570933024088544" />
+        <entry key="app/src/main/res/layout/fragment_launch.xml" value="0.27291666666666664" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.22533111572265627" />
+        <entry key="app/src/main/res/layout/fragment_register1.xml" value="0.4081665039062501" />
+        <entry key="app/src/main/res/layout/fragment_register2.xml" value="0.29149627685546875" />
+        <entry key="app/src/main/res/layout/fragment_register3.xml" value="0.13774363199869794" />
+        <entry key="app/src/main/res/layout/fre.xml" value="0.23229166666666667" />
       </map>
     </option>
   </component>

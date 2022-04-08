@@ -4,8 +4,6 @@
 <!--    android:layout_width="match_parent"-->
 <!--    android:layout_height="match_parent"-->
 <!--    tools:context=".RegisterFragment">-->
-
-
 <!--</FrameLayout>-->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -13,72 +11,128 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterP1RefFragment">
+    android:background="@drawable/reka4"
+    tools:context=".RegisterP3RefFragment">
+
+
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/titleForm_p3_ref"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Registration form"
-        android:textColor="#D500F9"
-        android:textSize="28sp"
+        android:layout_marginTop="56dp"
+        android:text="About me"
+        android:textColor="#090909"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
+    <View
+        android:layout_width="226dp"
+        android:layout_height="109dp"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/icon_upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
-        android:id="@+id/about_myself"
+        android:id="@+id/enterLocationForm_p1_ref"
+        android:layout_width="228dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="312dp"
+        android:background="@drawable/gradient_border_text_box"
+        android:ems="10"
+        android:hint="About me:"
+        android:paddingHorizontal="8dp"
+        android:textColor="#090909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/next_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="172dp"
-        android:ems="10"
-        android:hint="about my self"
+        android:backgroundTint="@color/white"
+        app:borderWidth="0dp"
+        android:scaleX=".5"
+        android:scaleY=".5"
+        android:src="@drawable/next_arrow"
+        android:layout_margin="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@id/next_fab"
+        app:layout_constraintTop_toTopOf="@id/next_fab"
+        app:layout_constraintBottom_toBottomOf="@id/next_fab"/>
+
+    <TextView
+        android:id="@+id/nameForm_p1_ref"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="448dp"
+        android:text="Phone number :"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.183"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/photo"
+    <CheckBox
+        android:id="@+id/check1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:ems="10"
-        android:hint="upload photo"
+        android:layout_marginTop="496dp"
+        android:backgroundTint="#F5EBEB"
+        android:buttonTint="#EFBFBF"
+        android:text="It's ok to share my phone number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintHorizontal_bias="0.277"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--    <EditText-->
+    <!--        android:id="@+id/enterNameForm_p1_ref"-->
+    <!--        android:layout_width="171dp"-->
+    <!--        android:layout_height="34dp"-->
+    <!--        android:layout_marginTop="448dp"-->
+    <!--        android:background="#F5EBEB"-->
+    <!--        android:ems="10"-->
+    <!--        android:hint=""-->
+    <!--        android:paddingHorizontal="8dp"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.875"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <EditText
-        android:id="@+id/names"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
+        android:id="@+id/enterLocationForm_p1_ref"
+        android:layout_width="209dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="448dp"
+        android:background="@drawable/rounded_corner_box"
         android:ems="10"
-        android:inputType="phone"
-        android:hint="enter phone number"
+        android:paddingHorizontal="8dp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
-    <Button
-        android:id="@+id/Next"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:text="@string/next_page"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="40dp"
-        />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -36,6 +36,7 @@
     <!--No Match-->
     <string name="no_match_text">No match found. We will let you know blabla</string>
     <string name="no_match_button">Home</string>
+    <string name="no">No_p1_ref</string>
 
     <!-- Forms-->
     <string name="yes">Yes</string>
