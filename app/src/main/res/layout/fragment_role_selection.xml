@@ -64,7 +64,7 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/next_fab"
+        android:id="@+id/next_fab_role"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
@@ -83,8 +83,8 @@
         android:text="Next"
         android:textColor="@color/black"
         android:textSize="22sp"
-        app:layout_constraintEnd_toStartOf="@id/next_fab"
-        app:layout_constraintTop_toTopOf="@id/next_fab"
-        app:layout_constraintBottom_toBottomOf="@id/next_fab"/>
+        app:layout_constraintEnd_toStartOf="@id/next_fab_role"
+        app:layout_constraintTop_toTopOf="@id/next_fab_role"
+        app:layout_constraintBottom_toBottomOf="@id/next_fab_role"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

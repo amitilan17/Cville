@@ -69,7 +69,7 @@ public class LanguageSelectionFragment extends Fragment {
     }
 
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        FloatingActionButton infoButton = view.findViewById(R.id.next_fab_p2_ref);
+        View infoButton = view.findViewById(R.id.next_fab_lang);
         infoButton.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(v);
             navController.navigate(R.id.action_languageFragment_to_roleFragment);
