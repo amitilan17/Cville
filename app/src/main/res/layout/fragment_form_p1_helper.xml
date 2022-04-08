@@ -11,14 +11,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/reka4"
-    tools:context=".RegisterP3RefFragment">
+    android:background="@drawable/reka4">
+<!--    tools:context=".RegisterP3RefFragment"-->
 
 
 <!---->
 
     <TextView
-        android:id="@+id/titleForm_p1_ref"
+        android:id="@+id/titleForm_p1_help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
@@ -32,7 +32,7 @@
 
 
     <EditText
-        android:id="@+id/enterNameForm_p1_ref"
+        android:id="@+id/enterNameForm_p1_help"
         android:layout_width="209dp"
         android:layout_height="29dp"
         android:layout_marginTop="148dp"
@@ -67,11 +67,11 @@
         android:layout_marginHorizontal="60dp"
         android:layout_marginTop="24dp"
         android:background="#cccccc"
-        app:layout_constraintTop_toBottomOf="@id/locationForm_p1_ref"
+        app:layout_constraintTop_toBottomOf="@id/locationForm_p1_help"
         tools:layout_editor_absoluteX="60dp" />
 
     <TextView
-        android:id="@+id/genderForm_p1_ref"
+        android:id="@+id/genderForm_p1_help"
         android:layout_width="83dp"
         android:layout_height="32dp"
         android:layout_marginTop="232dp"
@@ -90,7 +90,7 @@
         android:layout_marginHorizontal="60dp"
         android:layout_marginTop="24dp"
         android:background="#cccccc"
-        app:layout_constraintTop_toBottomOf="@id/genderForm_p1_ref"
+        app:layout_constraintTop_toBottomOf="@id/genderForm_p1_help"
         tools:layout_editor_absoluteX="60dp" />
 
     <View
@@ -100,11 +100,11 @@
         android:layout_marginHorizontal="60dp"
         android:layout_marginTop="24dp"
         android:background="#cccccc"
-        app:layout_constraintTop_toBottomOf="@id/nameForm_p1_ref"
+        app:layout_constraintTop_toBottomOf="@id/nameForm_p1_help"
         tools:layout_editor_absoluteX="41dp" />
 
     <RadioGroup
-        android:id="@+id/radioGroup_gender_p1_ref"
+        android:id="@+id/radioGroup_gender_p1_help"
         android:layout_width="205dp"
         android:layout_height="32dp"
         android:layout_marginTop="232dp"
@@ -116,7 +116,7 @@
 
 
         <RadioButton
-            android:id="@+id/radioButtonM_p1_ref"
+            android:id="@+id/radioButtonM_p1_help"
             android:layout_width="45dp"
             android:layout_height="33dp"
             android:onClick="radioButtonhandler"
@@ -128,7 +128,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <RadioButton
-            android:id="@+id/radioButtonF_p1_ref"
+            android:id="@+id/radioButtonF_p1_help"
             android:layout_width="45dp"
             android:layout_height="33dp"
             android:onClick="radioButtonhandler"
@@ -141,7 +141,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <RadioButton
-            android:id="@+id/radioButtonOther_p1_ref"
+            android:id="@+id/radioButtonOther_p1_help"
             android:layout_width="97dp"
             android:layout_height="match_parent"
             android:onClick="radioButtonhandler"
@@ -155,7 +155,7 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/locationForm_p1_ref"
+        android:id="@+id/locationForm_p1_help"
         android:layout_width="83dp"
         android:layout_height="32dp"
         android:layout_marginTop="316dp"
@@ -168,7 +168,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/nameForm_p1_ref"
+        android:id="@+id/nameForm_p1_help"
         android:layout_width="83dp"
         android:layout_height="32dp"
         android:layout_marginTop="148dp"
@@ -181,7 +181,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2_p1_ref"
+        android:id="@+id/guideline2_p1_help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal" />

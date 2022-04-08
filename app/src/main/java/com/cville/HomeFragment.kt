@@ -28,7 +28,13 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+//        ViewModelProvider(this).get(MainViewModel::class.java).loadMainUser {
+//            val imageView = view.findViewById<ImageView>(R.id.profile_image)
+//            MainViewModel.setProfileImgToView(requireContext(), it.image, imageView)
+//
+//            val userName = view.findViewById<TextView>(R.id.name)
+//            userName.text = it.name
+//        }
         val profileButton = view.findViewById<Button>(R.id.ProfileBox)
         profileButton.setOnClickListener {
 //            val user = User("1111", "Amit", Firebase.auth.currentUser?.photoUrl, "My name is Amit and I need help",null)
@@ -39,13 +45,13 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_homeFragment_to_lookingForConnectionFragment)
         }
 
-        ViewModelProvider(this).get(MainViewModel::class.java).getUserObj("1111") {
+        ViewModelProvider(this).get(MainViewModel::class.java).getUserObj("Zq8Eur5engREwAogfhLP5S82OTX2\n", {
             val imageView = view.findViewById<ImageView>(R.id.profile_image)
             MainViewModel.setProfileImgToView(requireContext(), it.image, imageView)
 
             val userName = view.findViewById<TextView>(R.id.name)
             userName.text = it.name
-        }
+        }, {})
 
 //        val infoButton = view.findViewById<Button>(R.id.Info)
 //        infoButton.setOnClickListener {
@@ -66,8 +72,9 @@ class HomeFragment : Fragment() {
         // todo: make sure edit fragments show previous fields
         val editProfileButton = view.findViewById<Button>(R.id.EditProfile)
         editProfileButton.setOnClickListener {
-            ViewModelProvider(this).get(RegisterViewModel::class.java).user =
-                ViewModelProvider(this).get(MainViewModel::class.java).user
+            ViewModelProvider(requireActivity()).get(MainViewModel::class.java).loadMainUser {
+                ViewModelProvider(requireActivity()).get(RegisterViewModel::class.java).user = it
+            }
             findNavController().navigate(R.id.action_homeFragment_to_registerP1RefugeeFragment)
         }
     }

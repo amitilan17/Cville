@@ -1,7 +1,7 @@
 package com.cville
 
 import android.content.Context
-import android.net.Uri
+import android.util.Log
 import android.widget.ImageView
 import androidx.lifecycle.ViewModel
 import com.bumptech.glide.Glide
@@ -29,28 +29,34 @@ class MainViewModel : ViewModel() {
     }
 
     fun uploadUser(item: User) {
+        Log.d("eilon", item.toString())
         db.collection(USERS_COLLECTION_TAG)
             .document(item.uid)
             .set(item)
     }
 
-    fun loadMainUser() {
-        getUserObj(Firebase.auth.currentUser!!.uid) {
-            user = it
-        }
+    fun loadMainUser(callback: (User) -> Unit) {
+        getUserObj(Firebase.auth.currentUser!!.uid,
+            { user = it; callback(it) }, { user = User(uid = Firebase.auth.currentUser!!.uid) })
     }
 
-    fun getUserObj(uid: String, callback: (User) -> Unit) {
+    fun getUserObj(uid: String, successCallback: (User) -> Unit, FailureCallback: () -> Unit) {
         db.collection(USERS_COLLECTION_TAG)
             .document(uid)
             .get()
             .addOnSuccessListener {
                 val res = it.toObject(User::class.java)
                 if (res != null) {
-                    callback(res)
+                    successCallback(res)
+                    Log.d("eilon", "sccss")
+                } else {
+                    FailureCallback()
+                    Log.d("eilon", "failsc")
                 }
             }
             .addOnFailureListener {
+                FailureCallback()
+                Log.d("eilon", "fail")
             }
     }
 }

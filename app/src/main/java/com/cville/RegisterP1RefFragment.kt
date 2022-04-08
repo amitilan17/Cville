@@ -34,11 +34,11 @@ class RegisterP1RefFragment : Fragment() {
             )
         spinner.adapter = adapter
 
-        viewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity()).get(RegisterViewModel::class.java)
 
         val name = view.findViewById<TextView>(R.id.enterNameForm_p1_ref)
         val gender = view.findViewById<RadioGroup>(R.id.radioGroup_gender_p1_ref)
-        val location = view.findViewById<TextView>(R.id.locationForm_p1_ref)
+        val location = view.findViewById<TextView>(R.id.enterLocationForm_p1_ref)
         val relatives = view.findViewById<RadioGroup>(R.id.radioGroup_relatives_p1_ref)
 
         view.findViewById<FloatingActionButton>(R.id.next_fab_p1_ref)

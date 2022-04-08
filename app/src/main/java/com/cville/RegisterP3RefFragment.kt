@@ -1,6 +1,7 @@
 package com.cville
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,7 @@ import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class RegisterP3RefFragment : Fragment() {
 
@@ -24,15 +26,15 @@ class RegisterP3RefFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity()).get(RegisterViewModel::class.java)
 
-        val nextButton = view.findViewById<Button>(R.id.next_fab_p3_ref)
+        val nextButton = view.findViewById<FloatingActionButton>(R.id.next_fab_p3_ref)
         nextButton.setOnClickListener {
 
             viewModel.user.description =
                 view.findViewById<EditText>(R.id.enterLocationForm_p3_ref).text.toString()
             viewModel.user.let { newUser: User ->
-                ViewModelProvider(this).get(MainViewModel::class.java).let {
+                ViewModelProvider(requireActivity()).get(MainViewModel::class.java).let {
                     it.uploadUser(newUser)
                     it.user = newUser
                 }
