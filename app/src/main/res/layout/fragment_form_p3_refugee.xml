@@ -46,7 +46,7 @@
         android:layout_width="228dp"
         android:layout_height="105dp"
         android:layout_marginTop="300dp"
-        android:background="#F5EBEB"
+        android:background="@drawable/gradient_border_text_box"
         android:ems="10"
         android:hint="please enter your location"
         android:paddingHorizontal="8dp"

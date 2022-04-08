@@ -26,7 +26,7 @@ class RegisterP3RefFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
 
-        val nextButton = view.findViewById<Button>(R.id.next_fab_p2_ref)
+        val nextButton = view.findViewById<Button>(R.id.next_fab_p3_ref)
         nextButton.setOnClickListener {
 
             viewModel.user.description =

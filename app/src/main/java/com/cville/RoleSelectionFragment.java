@@ -56,12 +56,12 @@ public class RoleSelectionFragment extends Fragment {
     }
 
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Button helperButton = view.findViewById(R.id.Helper);
+        Button helperButton = view.findViewById(R.id.helper_button);
         helperButton.setOnClickListener(v -> {
             role = "helper";
         });
 
-        Button seekerButton = view.findViewById(R.id.Seeker);
+        Button seekerButton = view.findViewById(R.id.refugee_button);
         seekerButton.setOnClickListener(v -> {
             role = "seeker";
         });

@@ -16,7 +16,6 @@
 
 
     <ImageButton
-        android:id="@+id/Ukranian"
         android:layout_width="299dp"
         android:layout_height="85dp"
         android:background="@drawable/g_20"
@@ -26,7 +25,6 @@
         tools:layout_editor_absoluteY="186dp" />
 
     <ImageButton
-        android:id="@+id/hebraw"
         android:layout_width="304dp"
         android:layout_height="95dp"
         android:background="@drawable/g_21"
@@ -37,7 +35,6 @@
         tools:layout_editor_absoluteY="442dp" />
 
     <ImageButton
-        android:id="@+id/hebraw"
         android:layout_width="304dp"
         android:layout_height="95dp"
         android:background="@drawable/g_1"

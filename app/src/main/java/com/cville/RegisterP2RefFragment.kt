@@ -32,14 +32,16 @@ class RegisterP2RefFragment : Fragment() {
         nextButton.setOnClickListener {
 
             var helps: String = ""
-            helps += view.findViewById<CheckBox>(R.id.check1).text
-            helps += view.findViewById<CheckBox>(R.id.check2).text
-            helps += view.findViewById<CheckBox>(R.id.check3).text
-            helps += view.findViewById<CheckBox>(R.id.check4).text
-            helps += view.findViewById<CheckBox>(R.id.check5).text
-            helps += view.findViewById<CheckBox>(R.id.check6).text
-            helps += view.findViewById<CheckBox>(R.id.check7).text
-            helps += view.findViewById<EditText>(R.id.others).text
+            helps += view.findViewById<CheckBox>(R.id.clothes_button).text
+            helps += view.findViewById<CheckBox>(R.id.transport_button).text
+            helps += view.findViewById<CheckBox>(R.id.food_button).text
+            helps += view.findViewById<CheckBox>(R.id.bearucracy_button).text
+            helps += view.findViewById<CheckBox>(R.id.translation_button).text
+            helps += view.findViewById<CheckBox>(R.id.accomodation_button).text
+            helps += view.findViewById<CheckBox>(R.id.education_button).text
+            helps += view.findViewById<EditText>(R.id.work_button).text
+            helps += view.findViewById<EditText>(R.id.health_button).text
+            helps += view.findViewById<EditText>(R.id.other_button).text
 
             viewModel.user.helps = helps
 
