@@ -36,43 +36,41 @@
         tools:text="Naoto Fukasawa" />
 
 
-    <!--    <Button-->
-    <!--        android:id="@+id/Info"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="@string/info"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toStartOf="@id/Help"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/textview_first" />-->
+        <Button
+            android:id="@+id/Info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/Help"
+            app:layout_constraintStart_toStartOf="parent"/>
 
-    <!--    <Button-->
-    <!--        android:id="@+id/Help"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="@string/help"-->
-    <!--        app:layout_constraintStart_toEndOf="@id/Info"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/textview_first"/>-->
+        <Button
+            android:id="@+id/Help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help"
+            app:layout_constraintStart_toEndOf="@id/Info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!--    <Button-->
-    <!--        android:id="@+id/EditProfile"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="@string/edit_profile"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toStartOf="@id/NewConnection"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/Info" />-->
+        <Button
+            android:id="@+id/EditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/NewConnection"
+            app:layout_constraintTop_toBottomOf="@id/Info" />
 
-    <!--    <Button-->
-    <!--        android:id="@+id/NewConnection"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="@string/new_connection"-->
-    <!--        app:layout_constraintStart_toEndOf="@id/EditProfile"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/Help"/>-->
+        <Button
+            android:id="@+id/NewConnection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_connection"
+            app:layout_constraintStart_toEndOf="@id/EditProfile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Help"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

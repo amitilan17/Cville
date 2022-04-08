@@ -1,13 +1,13 @@
 package com.cville
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 
@@ -29,7 +29,6 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-
         val profileButton = view.findViewById<Button>(R.id.ProfileBox)
         profileButton.setOnClickListener {
 //            val user = User("1111", "Amit", Firebase.auth.currentUser?.photoUrl, "My name is Amit and I need help",null)
@@ -40,7 +39,7 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_homeFragment_to_lookingForConnectionFragment)
         }
 
-        ViewModelProvider(this).get(MainViewModel::class.java).getUserObj("1111"){
+        ViewModelProvider(this).get(MainViewModel::class.java).getUserObj("1111") {
             val imageView = view.findViewById<ImageView>(R.id.profile_image)
             MainViewModel.setProfileImgToView(requireContext(), it.image, imageView)
 
@@ -67,6 +66,8 @@ class HomeFragment : Fragment() {
         // todo: make sure edit fragments show previous fields
         val editProfileButton = view.findViewById<Button>(R.id.EditProfile)
         editProfileButton.setOnClickListener {
+            ViewModelProvider(this).get(RegisterViewModel::class.java).user =
+                ViewModelProvider(this).get(MainViewModel::class.java).user
             findNavController().navigate(R.id.action_homeFragment_to_registerP1RefugeeFragment)
         }
     }

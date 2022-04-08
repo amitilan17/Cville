@@ -62,23 +62,9 @@
         android:label="fragment_form_p1_refugee"
         tools:layout="@layout/fragment_form_p1_refugee" >
         <action
-            android:id="@+id/action_registerP1RefugeeFragment_to_registerP2RefugeeFragment"
-            app:destination="@id/registerP2RefugeeFragment" />
+            android:id="@+id/action_registerP1RefugeeFragment_to_registerP2RefFragment"
+            app:destination="@id/registerP2RefFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/registerP2RefugeeFragment"
-        android:name="com.cville.RegisterP1RefFragment"
-        android:label="fragment_form_p2_refugee"
-        tools:layout="@layout/fragment_form_p2_refugee" >
-        <action
-            android:id="@+id/action_registerP2RefugeeFragment_to_registerP3RefugeeFragment"
-            app:destination="@id/registerP3RefugeeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/registerP3RefugeeFragment"
-        android:name="com.cville.RegisterP1RefFragment"
-        android:label="fragment_form_p3_refugee"
-        tools:layout="@layout/fragment_form_p3_refugee" />
     <fragment
         android:id="@+id/matchFragment"
         android:name="com.cville.MatchFragment"
@@ -164,5 +150,23 @@
         <action
             android:id="@+id/action_noMatchFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerP2RefFragment"
+        android:name="com.cville.RegisterP2RefFragment"
+        android:label="fragment_form_p2_refugee"
+        tools:layout="@layout/fragment_form_p2_refugee" >
+        <action
+            android:id="@+id/action_registerP2RefFragment_to_registerP3RefFragment"
+            app:destination="@id/registerP3RefFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerP3RefFragment"
+        android:name="com.cville.RegisterP3RefFragment"
+        android:label="fragment_form_p3_refugee"
+        tools:layout="@layout/fragment_form_p3_refugee" >
+        <action
+            android:id="@+id/action_registerP3RefFragment_to_lookingForConnectionFragment"
+            app:destination="@id/lookingForConnectionFragment" />
     </fragment>
 </navigation>
