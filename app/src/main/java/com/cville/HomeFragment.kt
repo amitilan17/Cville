@@ -47,21 +47,21 @@ class HomeFragment : Fragment() {
             userName.text = it.name
         }
 
-        val infoButton = view.findViewById<Button>(R.id.Info)
-        infoButton.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_infoFragment)
-        }
-
-        val helpButton = view.findViewById<Button>(R.id.Help)
-        helpButton.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_helpFragment)
-        }
-
-        val newConnectionButton = view.findViewById<Button>(R.id.NewConnection)
-        newConnectionButton.setOnClickListener {
-            // activate searching algorithm to get connection
-            // navigate to profile frag for given connection
-        }
+//        val infoButton = view.findViewById<Button>(R.id.Info)
+//        infoButton.setOnClickListener {
+//            findNavController().navigate(R.id.action_homeFragment_to_infoFragment)
+//        }
+//
+//        val helpButton = view.findViewById<Button>(R.id.Help)
+//        helpButton.setOnClickListener {
+//            findNavController().navigate(R.id.action_homeFragment_to_helpFragment)
+//        }
+//
+//        val newConnectionButton = view.findViewById<Button>(R.id.NewConnection)
+//        newConnectionButton.setOnClickListener {
+//            // activate searching algorithm to get connection
+//            // navigate to profile frag for given connection
+//        }
 
         // todo: make sure edit fragments show previous fields
         val editProfileButton = view.findViewById<Button>(R.id.EditProfile)

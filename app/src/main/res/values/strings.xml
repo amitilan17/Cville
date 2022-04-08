@@ -45,7 +45,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- Registration -->
-    <string name="like_help">I need help with</string>
+    <string name="need_help">I need help with</string>
+    <string name="can_help">I can help with</string>
 
 
 

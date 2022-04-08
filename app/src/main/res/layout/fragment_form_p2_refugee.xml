@@ -5,8 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".RegisterP2RefFragment">
 
-    <!--    android:background="@drawable/refugee_p2_bg"-->
-
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
@@ -24,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="90dp"
                 android:gravity="center"
-                android:text="@string/like_help"
+                android:text="@string/need_help"
                 android:textSize="30sp"
                 android:textStyle="normal"
                 app:layout_constraintEnd_toEndOf="parent"
