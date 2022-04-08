@@ -27,7 +27,7 @@
         tools:layout_editor_absoluteY="261dp" />
 
     <ImageButton
-        android:id="@+id/Ukranian"
+        android:id="@+id/hebraw"
         android:layout_width="199dp"
         android:layout_height="63dp"
         android:background="@drawable/hebrew"
@@ -38,7 +38,7 @@
         tools:layout_editor_absoluteY="463dp" />
 
     <ImageButton
-        android:id="@+id/Russian"
+        android:id="@+id/english"
         android:layout_width="199dp"
         android:layout_height="65dp"
         android:background="@drawable/english"
