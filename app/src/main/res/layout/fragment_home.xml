@@ -17,7 +17,7 @@
         android:textSize="35dp"
         android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Hello Nurit," /> <!-- TODO: connect to user name -->
+        android:text="Hello Nurit," /> <!-- TODO: connect to user name -->
 
     <ImageButton
         android:id="@+id/message_button"
