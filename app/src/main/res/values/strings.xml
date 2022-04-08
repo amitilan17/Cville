@@ -40,8 +40,14 @@
     <!-- Forms-->
     <string name="yes">Yes</string>
     <string name="no">No</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Registration -->
+    <string name="like_help">I need help with</string>
+
+
 
 
 </resources>
