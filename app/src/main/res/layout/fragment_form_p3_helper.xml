@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/enterLocationForm_p1_ref"
+        android:id="@+id/enterLocationForm_p3_helper"
         android:layout_width="228dp"
         android:layout_height="105dp"
         android:layout_marginTop="312dp"
@@ -121,7 +121,6 @@
     <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <EditText
-        android:id="@+id/enterLocationForm_p1_ref"
         android:layout_width="209dp"
         android:layout_height="29dp"
         android:layout_marginTop="448dp"

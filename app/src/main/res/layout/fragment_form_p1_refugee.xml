@@ -234,7 +234,7 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/locationForm_p1_ref"
+        android:id="@+id/locationView_p1_ref"
         android:layout_width="83dp"
         android:layout_height="32dp"
         android:layout_marginTop="316dp"
