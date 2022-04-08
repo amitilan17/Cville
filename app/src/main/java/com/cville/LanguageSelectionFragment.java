@@ -72,7 +72,8 @@ public class LanguageSelectionFragment extends Fragment {
         View infoButton = view.findViewById(R.id.next_fab_lang);
         infoButton.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(v);
-            navController.navigate(R.id.action_languageFragment_to_roleFragment);
+            navController.navigate(R.id.action_languageFragment_to_roleSelectionFragment);
         });
+
     }
 }

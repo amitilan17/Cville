@@ -80,7 +80,9 @@ class MainActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     ViewModelProvider(this).get(MainViewModel::class.java).loadMainUser {
-                        findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.action_registerP2RefFragment_to_registerP3RefFragment)
+                        ViewModelProvider(this).get(RegisterViewModel::class.java).user = it
+                        findNavController(R.id.nav_host_fragment_content_main)
+                            .navigate(R.id.action_splashFragment_to_languageFragment)
                     }
                     if (task.result.additionalUserInfo?.isNewUser == true) {
                         // TODO: logged in as new user

@@ -56,7 +56,7 @@ class RegisterP1RefFragment : Fragment() {
                     withFamily = relativesBool,
                     personsNumber = spinner.selectedItem.toString().toInt()
                 )
-                findNavController().navigate(R.id.action_registerP1RefugeeFragment_to_registerP2RefFragment)
+                findNavController().navigate(R.id.action_registerP1RefFragment_to_registerP2RefFragment)
             }
     }
 }

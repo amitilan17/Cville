@@ -37,15 +37,15 @@ class LookingForConnectionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val videoView = view.findViewById<VideoView>(R.id.videoView)
-        videoView!!.setVideoPath("android.resource://" + requireContext().packageName + "/" + R.raw.sample)
-
-        videoView.start() //start() method of the VideoView class will start the video to play
+//        val videoView = view.findViewById<VideoView>(R.id.videoView)
+//        videoView!!.setVideoPath("android.resource://" + requireContext().packageName + "/" + R.raw.sample)
+//
+//        videoView.start() //start() method of the VideoView class will start the video to play
 
         handler.postDelayed(r,1000)
     }
 
     private fun afterAnimation(){
-        findNavController().navigate(R.id.action_lookingForConnectionFragment_to_noMatchFragment)
+        findNavController().navigate(R.id.action_lookingForConnectionFragment_to_matchFragment)
     }
 }

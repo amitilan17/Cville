@@ -18,13 +18,13 @@
         tools:layout_editor_absoluteY="2dp" />
 
     <ImageButton
-        android:id="@+id/chat"
+        android:id="@+id/chat_match"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rectangle31"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/next"
+        app:layout_constraintStart_toEndOf="@id/next_match"
         android:layout_marginTop="550dp"
         tools:layout_editor_absoluteX="248dp"
         tools:layout_editor_absoluteY="631dp"
@@ -32,21 +32,21 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/chat"
-        app:layout_constraintStart_toStartOf="@id/chat"
-        app:layout_constraintBottom_toBottomOf="@+id/chat"
-        app:layout_constraintEnd_toEndOf="@id/chat"
+        app:layout_constraintTop_toTopOf="@id/chat_match"
+        app:layout_constraintStart_toStartOf="@id/chat_match"
+        app:layout_constraintBottom_toBottomOf="@+id/chat_match"
+        app:layout_constraintEnd_toEndOf="@id/chat_match"
         android:text="@string/chat"
         />
 
     <ImageButton
-        android:id="@+id/next"
+        android:id="@+id/next_match"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/fui_transparent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/chat"
+        app:layout_constraintEnd_toStartOf="@id/chat_match"
         android:layout_marginTop="550dp"
         android:src="@drawable/rectangle32"
         tools:layout_editor_absoluteX="72dp"
@@ -55,10 +55,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/next"
-        app:layout_constraintStart_toStartOf="@id/next"
-        app:layout_constraintBottom_toBottomOf="@+id/next"
-        app:layout_constraintEnd_toEndOf="@id/next"
+        app:layout_constraintTop_toTopOf="@id/next_match"
+        app:layout_constraintStart_toStartOf="@id/next_match"
+        app:layout_constraintBottom_toBottomOf="@+id/next_match"
+        app:layout_constraintEnd_toEndOf="@id/next_match"
         android:text="@string/next_profile"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

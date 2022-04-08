@@ -70,12 +70,7 @@ public class RoleSelectionFragment extends Fragment {
         ImageButton infoButton = view.findViewById(R.id.next_fab_role);
         infoButton.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(v);
-            switch (role){
-                case "helper":
-                    navController.navigate(R.id.action_roleSelectionFragment_to_registerP1HelperFragment);
-                case "seeker":
-                    navController.navigate(R.id.action_roleSelectionFragment_to_registerP1HelperFragment);
-            }
+            navController.navigate(R.id.action_roleSelectionFragment_to_registerP1RefFragment);
         });
     }
 }

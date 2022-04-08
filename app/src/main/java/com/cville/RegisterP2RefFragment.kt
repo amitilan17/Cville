@@ -47,7 +47,7 @@ class RegisterP2RefFragment : Fragment() {
 
             viewModel.user.helps = helps
 
-            findNavController().navigate(R.id.action_registerP2RefFragment_to_registerP3RefFragment)
+            findNavController().navigate(R.id.action_registerP2RefFragment_to_registerP3RefFragment2)
         }
     }
 }

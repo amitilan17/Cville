@@ -12,7 +12,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/reka4"
-    tools:context=".RegisterP3RefFragment">
+    tools:context=".RegisterP1RefFragment">
 
 
     <View
@@ -273,8 +273,7 @@
         android:src="@drawable/next_arrow"
         android:layout_margin="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:contentDescription="TODO" />
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <TextView
         android:layout_width="wrap_content"

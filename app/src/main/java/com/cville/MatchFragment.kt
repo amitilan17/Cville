@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
@@ -32,21 +33,17 @@ class MatchFragment() : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val bundle = arguments
-        val args = MatchFragmentArgs.fromBundle(bundle!!)
-        user = args.user
-
-        val nextButton = view.findViewById<Button>(R.id.next)
+        val nextButton = view.findViewById<ImageButton>(R.id.next_match)
         nextButton.setOnClickListener {
-            findNavController().navigate(R.id.action_matchFragment_to_lookingForConnectionFragment)
+//            findNavController().navigate(R.id.action_matchFragment_to_lookingForConnectionFragment)
         }
 
-        val chatButton = view.findViewById<Button>(R.id.chat)
+        val chatButton = view.findViewById<ImageButton>(R.id.chat_match)
         chatButton.setOnClickListener {
-            findNavController().navigate(R.id.action_profileFragment_to_chatFragment)
+//            findNavController().navigate(R.id.action_profileFragment_to_chatFragment)
         }
 
-        val userDescription = view.findViewById<TextView>(R.id.description)
-        userDescription.text = user.description
+//        val userDescription = view.findViewById<TextView>(R.id.description_match)
+//        userDescription.text = user.description
     }
 }

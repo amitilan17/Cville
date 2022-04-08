@@ -12,7 +12,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/last_backround"
-    tools:context=".RegisterP3RefFragment">
+    tools:context=".InfoFragment">
 
 
     <ImageButton

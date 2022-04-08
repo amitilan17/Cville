@@ -32,13 +32,13 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val bundle = arguments
-        val args = ProfileFragmentArgs.fromBundle(bundle!!)
-        user = args.user
+//        val bundle = arguments
+//        val args = ProfileFragmentArgs.fromBundle(bundle!!)
+//        user = args.user
 
         val chatButton = view.findViewById<Button>(R.id.chat)
         chatButton.setOnClickListener {
-            findNavController().navigate(R.id.action_profileFragment_to_chatFragment)
+//            findNavController().navigate(R.id.action_profileFragment_to_chatFragment)
         }
 
         val imageView = view.findViewById<ImageView>(R.id.profile_image)

@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Cville">
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_main"
+            android:label="@string/app_name"
             android:theme="@style/Theme.Cville.NoActionBar"
             android:exported="true">
             <intent-filter>

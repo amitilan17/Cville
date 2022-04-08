@@ -14,8 +14,6 @@
     android:background="@drawable/reka4"
     tools:context=".RegisterP3RefFragment">
 
-
-
     <TextView
         android:id="@+id/titleForm_p3_ref"
         android:layout_width="wrap_content"

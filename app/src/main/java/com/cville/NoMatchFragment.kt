@@ -27,7 +27,7 @@ class NoMatchFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val homeButton = view.findViewById<Button>(R.id.back_home)
         homeButton.setOnClickListener {
-            findNavController().navigate(R.id.action_noMatchFragment_to_homeFragment)
+//            findNavController().navigate(R.id.action_noMatchFragment_to_homeFragment)
         }
     }
 

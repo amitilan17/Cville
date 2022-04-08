@@ -56,12 +56,12 @@ class HomeFragment : Fragment() {
 
         val infoButton = view.findViewById<ImageButton>(R.id.rights_info_button)
         infoButton.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_infoFragment)
+//            findNavController().navigate(R.id.action_homeFragment_to_infoFragment)
         }
 
         val helpButton = view.findViewById<ImageButton>(R.id.relevant_non_profit_button)
         helpButton.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_helpFragment)
+//            findNavController().navigate(R.id.action_homeFragment_to_helpFragment)
         }
 
         val newConnectionButton = view.findViewById<ImageButton>(R.id.new_connection_button_text)
@@ -76,7 +76,7 @@ class HomeFragment : Fragment() {
             ViewModelProvider(requireActivity()).get(MainViewModel::class.java).loadMainUser {
                 ViewModelProvider(requireActivity()).get(RegisterViewModel::class.java).user = it
             }
-            findNavController().navigate(R.id.action_homeFragment_to_registerP1RefugeeFragment)
+//            findNavController().navigate(R.id.action_homeFragment_to_registerP1RefugeeFragment)
         }
     }
 }
