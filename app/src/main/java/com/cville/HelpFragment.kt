@@ -44,13 +44,13 @@ class HelpFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val assafButton = view.findViewById<ImageButton>(R.id.hotline)
+        val assafButton = view.findViewById<ImageButton>(R.id.assaf)
         assafButton.setOnClickListener {
             val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://assaf.org.il/en/"))
             startActivity(browserIntent)
         }
 
-        val hotlineButton = view.findViewById<ImageButton>(R.id.assaf)
+        val hotlineButton = view.findViewById<ImageButton>(R.id.hotline)
         hotlineButton.setOnClickListener {
             val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://hotline.org.il/"))
             startActivity(browserIntent)
