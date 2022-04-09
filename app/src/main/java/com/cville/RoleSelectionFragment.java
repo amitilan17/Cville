@@ -3,6 +3,7 @@ package com.cville;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
@@ -67,8 +68,10 @@ public class RoleSelectionFragment extends Fragment {
             role = "seeker";
         });
 
-        ImageButton infoButton = view.findViewById(R.id.next_fab_role);
-        infoButton.setOnClickListener(v -> {
+        ImageButton nextButton = view.findViewById(R.id.next_fab_role);
+        nextButton.setOnClickListener(v -> {
+            RegisterViewModel vm = new ViewModelProvider(this).get(RegisterViewModel.class);
+            vm.getUser().setRole(role);
             NavController navController = Navigation.findNavController(v);
             navController.navigate(R.id.action_roleSelectionFragment_to_registerP1RefFragment);
         });

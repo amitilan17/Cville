@@ -13,6 +13,11 @@ class MainViewModel : ViewModel() {
     lateinit var user: User
     private val db = FirebaseFirestore.getInstance()
 
+    init {
+
+        Log.d("eilon", "new main vm")
+    }
+
     companion object {
         private const val USERS_COLLECTION_TAG = "Users"
         fun setProfileImgToView(
@@ -36,8 +41,14 @@ class MainViewModel : ViewModel() {
     }
 
     fun loadMainUser(callback: (User) -> Unit) {
+        Log.d("eilon", "getting user")
         getUserObj(Firebase.auth.currentUser!!.uid,
-            { user = it; callback(it) }, { user = User(uid = Firebase.auth.currentUser!!.uid) })
+            {
+                user = it
+                callback(it)
+                Log.d("eilon", "setting found user to $it")
+            },
+            { user = User(uid = Firebase.auth.currentUser!!.uid) })
     }
 
     fun getUserObj(uid: String, successCallback: (User) -> Unit, FailureCallback: () -> Unit) {
@@ -47,11 +58,11 @@ class MainViewModel : ViewModel() {
             .addOnSuccessListener {
                 val res = it.toObject(User::class.java)
                 if (res != null) {
-                    successCallback(res)
                     Log.d("eilon", "sccss")
+                    successCallback(res)
                 } else {
-                    FailureCallback()
                     Log.d("eilon", "failsc")
+                    FailureCallback()
                 }
             }
             .addOnFailureListener {

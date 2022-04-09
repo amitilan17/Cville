@@ -79,21 +79,30 @@ class MainActivity : AppCompatActivity() {
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    ViewModelProvider(this).get(MainViewModel::class.java).loadMainUser {
-                        ViewModelProvider(this).get(RegisterViewModel::class.java).user = it
-                        findNavController(R.id.nav_host_fragment_content_main)
-                            .navigate(R.id.action_splashFragment_to_languageFragment)
-                    }
+                    val mainVm = ViewModelProvider(this).get(MainViewModel::class.java)
                     if (task.result.additionalUserInfo?.isNewUser == true) {
                         // TODO: logged in as new user
+                        val registerVm = ViewModelProvider(this).get(RegisterViewModel::class.java)
+                        val user = User(uid = task.result.user?.uid ?: "1111")
+                        mainVm.user = user
+                        registerVm.user = user
+                        findNavController(R.id.nav_host_fragment_content_main)
+                            .navigate(R.id.action_splashFragment_to_languageFragment)
                         Log.d("eilon", "logged in as new user")
                     } else {
-                        // TODO: logged in as existing user
-                        Log.d(
-                            "eilon",
-                            "logged in as existing user" + Firebase.auth.currentUser.toString()
-                        )
+                        mainVm.loadMainUser {
+                            // TODO: logged in as existing user
+                            findNavController(R.id.nav_host_fragment_content_main)
+                                .navigate(R.id.action_splashFragment_to_homeFragment)
+                            Log.d(
+                                "eilon",
+                                "logged in as existing user" + Firebase.auth.currentUser.toString()
+                            )
+                        }
                     }
+
+                } else {
+                    Log.d("eilon", "Failed to connect to google user")
                 }
             }
     }

@@ -29,41 +29,13 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        ViewModelProvider(this).get(MainViewModel::class.java).loadMainUser {
-//            val imageView = view.findViewById<ImageView>(R.id.profile_image)
-//            MainViewModel.setProfileImgToView(requireContext(), it.image, imageView)
-//
-//            val userName = view.findViewById<TextView>(R.id.name)
-//            userName.text = it.name
-//        }
-//        val profileButton = view.findViewById<ImageButton>(R.id.ProfileBox)
-//        profileButton.setOnClickListener {
-//            val user = User("1111", "Amit", Firebase.auth.currentUser?.photoUrl, "My name is Amit and I need help",null)
-//            ViewModelProvider(this).get(MainViewModel::class.java).getUserObj("1111") {
-//                val directions = HomeFragmentDirections.actionHomeFragmentToProfileFragment(it)
-//                findNavController().navigate(directions)
-//            }
-//            findNavController().navigate(R.id.action_homeFragment_to_lookingForConnectionFragment)
-//        }
-
-        ViewModelProvider(this).get(MainViewModel::class.java).getUserObj("Zq8Eur5engREwAogfhLP5S82OTX2\n", {
-            val imageView = view.findViewById<ImageView>(R.id.profile_image)
-            MainViewModel.setProfileImgToView(requireContext(), it.image, imageView)
-
-            val userName = view.findViewById<TextView>(R.id.name)
-            userName.text = it.name
-        }, {})
+        val vm = ViewModelProvider(this).get(MainViewModel::class.java)
+        val userName = view.findViewById<TextView>(R.id.name)
+        userName.text = "Hello ${vm.user.name} ,"
 
         val messageButton = view.findViewById<ImageButton>(R.id.message_button)
         messageButton.setOnClickListener {
-            val user = User(
-                "1111",
-                "",
-                "",
-                "Peter",
-                "M"
-            )
-            val directions = HomeFragmentDirections.actionHomeFragmentToMatchFragment(user)
+            val directions = HomeFragmentDirections.actionHomeFragmentToMatchFragment(vm.user)
             findNavController().navigate(directions)
         }
 
