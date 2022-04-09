@@ -29,8 +29,8 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val vm = ViewModelProvider(this).get(MainViewModel::class.java)
-        val userName = view.findViewById<TextView>(R.id.name)
+        val vm = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
+        val userName = view.findViewById<TextView>(R.id.user_name)
         userName.text = "Hello ${vm.user.name} ,"
 
         val messageButton = view.findViewById<ImageButton>(R.id.message_button)
