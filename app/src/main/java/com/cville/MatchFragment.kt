@@ -33,17 +33,21 @@ class MatchFragment() : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val bundle = arguments
+        val args = MatchFragmentArgs.fromBundle(bundle!!)
+        user = args.user
+
         val nextButton = view.findViewById<ImageButton>(R.id.next_match)
         nextButton.setOnClickListener {
-//            findNavController().navigate(R.id.action_matchFragment_to_lookingForConnectionFragment)
+            findNavController().navigate(R.id.action_matchFragment_to_lookingForConnectionFragment)
         }
 
         val chatButton = view.findViewById<ImageButton>(R.id.chat_match)
         chatButton.setOnClickListener {
-//            findNavController().navigate(R.id.action_profileFragment_to_chatFragment)
+            findNavController().navigate(R.id.action_matchFragment_to_chatFragment)
         }
 
-//        val userDescription = view.findViewById<TextView>(R.id.description_match)
+//        val userDescription = view.findViewById<TextView>(R.id.description)
 //        userDescription.text = user.description
     }
 }

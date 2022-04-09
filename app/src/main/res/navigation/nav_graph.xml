@@ -63,7 +63,18 @@
         android:id="@+id/matchFragment"
         android:name="com.cville.MatchFragment"
         android:label="fragment_match"
-        tools:layout="@layout/fragment_match" />
+        tools:layout="@layout/fragment_match" >
+        <argument
+            android:name="user"
+            app:nullable="false"
+            app:argType="com.cville.User"/>
+        <action
+            android:id="@+id/action_matchFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_matchFragment_to_lookingForConnectionFragment"
+            app:destination="@id/lookingForConnectionFragment" />
+    </fragment>
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.cville.SplashFragment"
@@ -73,4 +84,40 @@
             android:id="@+id/action_splashFragment_to_languageFragment"
             app:destination="@id/languageFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.cville.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_lookingForConnectionFragment"
+            app:destination="@id/lookingForConnectionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_registerP1RefFragment"
+            app:destination="@id/registerP1RefFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_matchFragment"
+            app:destination="@id/matchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.cville.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.cville.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.cville.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
 </navigation>

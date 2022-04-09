@@ -46,6 +46,15 @@ class LookingForConnectionFragment : Fragment() {
     }
 
     private fun afterAnimation(){
-        findNavController().navigate(R.id.action_lookingForConnectionFragment_to_matchFragment)
+
+        val user = User(
+            "1111",
+            "",
+            "",
+            "Peter",
+            "M"
+        )
+        val directions = LookingForConnectionFragmentDirections.actionLookingForConnectionFragmentToMatchFragment(user)
+        findNavController().navigate(directions)
     }
 }

@@ -54,29 +54,40 @@ class HomeFragment : Fragment() {
             userName.text = it.name
         }, {})
 
+        val messageButton = view.findViewById<ImageButton>(R.id.message_button)
+        messageButton.setOnClickListener {
+            val user = User(
+                "1111",
+                "",
+                "",
+                "Peter",
+                "M"
+            )
+            val directions = HomeFragmentDirections.actionHomeFragmentToMatchFragment(user)
+            findNavController().navigate(directions)
+        }
+
         val infoButton = view.findViewById<ImageButton>(R.id.rights_info_button)
         infoButton.setOnClickListener {
-//            findNavController().navigate(R.id.action_homeFragment_to_infoFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_infoFragment)
         }
 
         val helpButton = view.findViewById<ImageButton>(R.id.relevant_non_profit_button)
         helpButton.setOnClickListener {
-//            findNavController().navigate(R.id.action_homeFragment_to_helpFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_helpFragment)
         }
-
-        val newConnectionButton = view.findViewById<ImageButton>(R.id.new_connection_button_text)
+        val newConnectionButton = view.findViewById<ImageButton>(R.id.new_connection_button)
         newConnectionButton.setOnClickListener {
-            // activate searching algorithm to get connection
-            // navigate to profile frag for given connection
+            findNavController().navigate(R.id.action_homeFragment_to_lookingForConnectionFragment)
         }
 
         // todo: make sure edit fragments show previous fields
         val editProfileButton = view.findViewById<ImageButton>(R.id.edit_profile_button)
         editProfileButton.setOnClickListener {
-            ViewModelProvider(requireActivity()).get(MainViewModel::class.java).loadMainUser {
-                ViewModelProvider(requireActivity()).get(RegisterViewModel::class.java).user = it
-            }
-//            findNavController().navigate(R.id.action_homeFragment_to_registerP1RefugeeFragment)
+//            ViewModelProvider(requireActivity()).get(MainViewModel::class.java).loadMainUser {
+//                ViewModelProvider(requireActivity()).get(RegisterViewModel::class.java).user = it
+//            }
+            findNavController().navigate(R.id.action_homeFragment_to_registerP1RefFragment)
         }
     }
 }
